@@ -1,0 +1,11 @@
+cluster.name: "docker-cluster"
+network.host: elasticsearch
+discovery.type: single-node
+xpack.security.enabled: false
+discovery.seed_hosts: elasticsearch
+node.name: elasticsearch
+node.master: true
+node.data: true
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-headers: "Authorization"

@@ -1,0 +1,4 @@
+selenium
+pyvi
+elasticsearch==7.6.0
+scikit-learn
