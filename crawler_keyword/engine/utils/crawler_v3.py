@@ -229,8 +229,12 @@ def crawlSQL(source="", symbol="", keyword="",from_page=1, to_page=10000, date_r
                 postid = db.get_postID(url=link)
                 if postid is None:
                     db.insert_content_to_mysql(content=data["content"], published="0", created=data["created"],url=link,tokenize_content=data["tokenize_content"], sentiment=data["sentiment"])
+                    newID = db.get_postID(url=link)
+                    db.insert_post_tags(postId=newID, symbol=symbol, keywordName=keyword)
                 else:
                     db.insert_post_tags(postId=postid, symbol=symbol, keywordName=keyword)
+                    
+                    
     else:
         msg = "Can't connect to mysql"
     wd.close()
