@@ -193,68 +193,48 @@ def find_page_range(source, keyword, from_page, to_page, date_range):
 
     print("FROM PAGE",page_limit_left,"TO PAGE:",page_limit_right)
     return (page_limit_left, page_limit_right)
-
-
-def crawl(source="",es_index="posts", keyword="", from_page=1, to_page=10000, exit_when_url_exist=True, date_range=None):
-    wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
-    
-    
-    print("CRAWLING FROM SOURCE {:s}".format(source))
+def crawlSQL(source="", symbol="", keyword="",from_page=1, to_page=10000, date_range=None):
+    wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME, options=wd_options)
+    print("crawling from:", source)
     new_record = 0
     msg = ""
 
     xpath_configuration = config[source]["xpath"]
     page_url = config[source]["page_url"].replace("{$keyword$}", keyword)
 
-    """
-    Find the starting page and ending page if date_range is provided
-    """
-    (start_page, end_page) = find_page_range(source=source, keyword=keyword,
-                                             from_page=from_page, to_page=to_page, date_range=date_range)
-
+    (start_page, end_page) = find_page_range(source=source, keyword=keyword, from_page=from_page, to_page=to_page, date_range=date_range)
     from_page = max(from_page, start_page)
     to_page = min(to_page, end_page)
-    """
-    End of finding starting and ending page
-    """
 
-    if es.connection_is_available():
+    if db.connection_available():
         print("Scraping page", from_page, to_page)
         exit_because_url_exist = False
 
-        for page in range(from_page, to_page+1):
+        for page in range(from_page, to_page):
             if exit_because_url_exist:
                 break
-
-            url = page_url.replace("{$page$}", str(page))
-            print("GETTING ", url)
+            url = page_url.replace("{$page$}",str(page))
+            print("get: ", url)
             wd.get(url)
-            link_elements = wd.find_elements_by_xpath(
-                xpath_configuration["post_links"])
-            links = [link_element.get_attribute(
-                "href") for link_element in link_elements]
+            link_elements = wd.find_element_by_xpath(
+                xpath_configuration["post_link"]
+            )
+            links = [link_element.get_attribute("href") for link_element in link_elements]
 
             for link in links:
-                print("Getting post data from ", link)
-                post_data = get_post_content_from_link(
-                    source=source, post_link=link, keyword=keyword)
-                if es.document_exists(es_index=es_index, url=link):
-                    print("DOCUMENT EXISTED IN ELASTIC.", link)
-                    if (exit_when_url_exist):
-                        exit_because_url_exist = True
-                        break
+                print("get data from :", link)
+                data = get_post_content_from_link(
+                    source=source, post_link=link, keyword=keyword, symbol=symbol
+                )
+                postid = db.get_postID(url=link)
+                if postid is None:
+                    db.insert_content_to_mysql(content=data["content"], published="0", created=data["created"],url=link,tokenize_content=data["tokenize_content"], sentiment=data["sentiment"])
                 else:
-                    es.add_document(
-                        es_index=es_index, data=post_data)
-                    new_record += 1
+                    db.insert_post_tags(postId=postid, symbol=symbol, keywordName=keyword)
     else:
-        msg = "Cannot connect to elastic search"
-
+        msg = "Can't connect to mysql"
     wd.close()
-
-    return {
+    return{
         "new_record": new_record,
         "msg": msg
     }
-
-
