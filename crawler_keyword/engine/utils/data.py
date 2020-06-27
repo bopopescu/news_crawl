@@ -22,6 +22,24 @@ def date_in_range(date, date_range):
         print("Error checking date in range "+str(e))
         return True
 
+
+"""
+Convert from extracted date format (Day_of_week, DD/MM/YYYY, hh:mm (GMT+x)) to MYSQL DATETIME format (YYYY-MM-DD hh:mm:ss)
+Thứ ba, 19/5/2020, 11:14 (GMT+7) -> 2020-05-19 11:14:00
+"""
+def convert_to_mysql_datetime(raw_date):
+    items = raw_date.split(", ")
+    date = items[1].split("/")
+    date.reverse()
+    date = "-".join(date)
+    time = items[2].split(" ")[0].split(":")
+    while len(time) < 3:
+        time.append("00")
+    time = ":".join(time)
+    
+    return "{} {}".format(date,time)
+
+
 """
 Remove image, table, html tags from text
 """

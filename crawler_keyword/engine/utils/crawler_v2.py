@@ -1,6 +1,5 @@
 import re
 import platform
-import utils.elastic as es
 import time
 import datetime
 import utils.data as data_handler
@@ -25,14 +24,14 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
     data = {
         "keyword": keyword,
         "symbol": symbol,
-        # "url": "",
-        # "title": "",
-        # "content": "",
-        # "date": "",
-        # "author": "",
-        # "tokenize_content": "",
-        # "sentiment": "",
-        # "created": "",
+        "url": "",
+        "title": "",
+        "content": "",
+        "date": "",
+        "author": "",
+        "tokenize_content": "",
+        "sentiment": "",
+        "created": "",
     }
     data["url"] = post_link
     wd.get(post_link)
@@ -54,7 +53,7 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
     try:
         date = wd.find_element_by_xpath(
             config[source]["xpath"]["date"]).get_attribute("innerText")
-        data["date"] = date
+        data["date"] = data_handler.convert_to_mysql_datetime(date)
     except Exception as e:
         print("Warning: Can't fetch date "+str(e))
 
@@ -195,7 +194,7 @@ def find_page_range(source, keyword, from_page, to_page, date_range):
     return (page_limit_left, page_limit_right)
 
 
-def crawl(source="",es_index="posts", keyword="", from_page=1, to_page=10000, exit_when_url_exist=True, date_range=None):
+def crawl(source="",symbol="posts", keyword="", from_page=1, to_page=10000, exit_when_url_exist=True, date_range=None):
     wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
     
     
@@ -218,7 +217,7 @@ def crawl(source="",es_index="posts", keyword="", from_page=1, to_page=10000, ex
     End of finding starting and ending page
     """
 
-    if es.connection_is_available():
+    if db.connection_available():
         print("Scraping page", from_page, to_page)
         exit_because_url_exist = False
 
@@ -230,25 +229,25 @@ def crawl(source="",es_index="posts", keyword="", from_page=1, to_page=10000, ex
             print("GETTING ", url)
             wd.get(url)
             link_elements = wd.find_elements_by_xpath(
-                xpath_configuration["post_links"])
-            links = [link_element.get_attribute(
-                "href") for link_element in link_elements]
+                xpath_configuration["post_links"]
+            )
+            links = [link_element.get_attribute("href") for link_element in link_elements]
 
             for link in links:
-                print("Getting post data from ", link)
-                post_data = get_post_content_from_link(
-                    source=source, post_link=link, keyword=keyword)
-                if es.document_exists(es_index=es_index, url=link):
-                    print("DOCUMENT EXISTED IN ELASTIC.", link)
-                    if (exit_when_url_exist):
-                        exit_because_url_exist = True
-                        break
+                print("get data from :", link)
+                data = get_post_content_from_link(
+                    source=source, post_link=link, keyword=keyword, symbol=symbol
+                )
+                postid = db.get_postID(url=link)
+                if postid is None:
+                    db.insert_content_to_mysql(content=data["content"], published=data["date"], created=data["created"],url=link,tokenize_content=data["tokenize_content"], sentiment=data["sentiment"])
+                    newID = db.get_postID(url=link)
+                    db.insert_post_tags(postId=newID, symbol=symbol, keywordName=keyword)
                 else:
-                    es.add_document(
-                        es_index=es_index, data=post_data)
-                    new_record += 1
+                    db.insert_post_tags(postId=postid, symbol=symbol, keywordName=keyword)
+            
     else:
-        msg = "Cannot connect to elastic search"
+        msg = "Cannot connect to mysql"
 
     wd.close()
 

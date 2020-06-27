@@ -1,9 +1,10 @@
 import sys
 import utils.crawler_v2 as crawler
-import utils.mysql as database
+import utils.mysqlutils as database
 import time
 from datetime import date
 from cfg.config import config as sources
+import utils.mysqlutils as db
 
 begin = time.time()
 
@@ -16,14 +17,15 @@ except:
     time_start_crawl = today
     time_end_crawl = today
 
-stock_indexes = database.get_all_stock_ticket()
+stock_indexes = db.get_all_stock_ticket()
+stock_indexes = ["FPT"]
 for stock_index in stock_indexes:
     print("FETCHING STOCK {}".format(stock_index))
     keywords = database.get_keywords_by_stock_ticket(stock_index)
     for keyword in keywords:
         print("     Looking for keyword {}".format(keyword))
         for source in sources:
-            print(crawler.crawl(source=source,es_index=stock_index,from_page=1,to_page=10,keyword=keyword,exit_when_url_exist=False,date_range=(time_start_crawl,time_end_crawl)))
+            print(crawler.crawl(source=source,symbol=stock_index,from_page=1,to_page=10,keyword=keyword,exit_when_url_exist=False,date_range=(time_start_crawl,time_end_crawl)))
 
 end = time.time()
 

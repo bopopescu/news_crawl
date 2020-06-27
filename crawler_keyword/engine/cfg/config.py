@@ -7,10 +7,10 @@ ELASTIC_CONFIG = {
 }
 
 MYSQL_CONFIG = {
-    "host": "192.168.41.19",
-    "user": "crawl",
-    "passwd": "134679825aA!",
-    "database": "sentiment"
+    "host": "localhost",
+    "user": "root",
+    "passwd": "",
+    "database": "crawler"
 }
 
 config = {
