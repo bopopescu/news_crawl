@@ -1,6 +1,9 @@
 import re
 from pyvi import ViTokenizer
 from joblib import load
+from sentence_splitter import SentenceSplitter
+splitter = SentenceSplitter(language='en')
+from cfg.config import SENTIMENT_MODEL_PATH
 
 """
 date format: d/m/y
@@ -59,9 +62,14 @@ def prepare_content(text):
 def tokenize_content(text):
     return ViTokenizer.tokenize(text)
 
+def get_sentences_contain_symbol(text,symbol):
+    sentences = splitter.split(text=text.replace(","," "))
+    return [sentence for sentence in sentences if re.search('(?i){}'.format(symbol),sentence)]
+
 def sentiment(doc):
     x = [str(doc)]
-    model = load('/model/model.pkl')
+    model = load(SENTIMENT_MODEL_PATH)
     pred = model.predict(x)
     result = 'POS' if pred == ['up'] else 'NEG'
     return result
+

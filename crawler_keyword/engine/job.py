@@ -18,7 +18,6 @@ except:
     time_end_crawl = today
 
 stock_indexes = db.get_all_stock_ticket()
-stock_indexes = ["FPT"]
 for stock_index in stock_indexes:
     print("FETCHING STOCK {}".format(stock_index))
     keywords = database.get_keywords_by_stock_ticket(stock_index)

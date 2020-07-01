@@ -9,28 +9,30 @@ from cfg.config import config, CHROME_PATH
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from cfg.config import config
-import utils.mysqlutils as db
-
+import utils.mysqlutils as db 
 
 wd_options = Options()
 wd_options.add_argument("--headless")
 wd_options.add_argument('--no-sandbox')
 wd_options.add_argument('--disable-dev-shm-usage')
 
-# wd = webdriver.Chrome("./engine/chromedriver.exe", options=wd_options)
-wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
+# wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
+# wd = webdriver.Chrome("./engine/chromedriver", options=wd_options)
 
 def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
+    wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
+
     data = {
         "keyword": keyword,
         "symbol": symbol,
         "url": "",
         "title": "",
+        "summary": "",
+        "image_url": "",
         "content": "",
         "date": "",
         "author": "",
         "tokenize_content": "",
-        "sentiment": "",
         "created": "",
     }
     data["url"] = post_link
@@ -38,8 +40,10 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
 
     try:
         title = wd.find_element_by_xpath(
-            config[source]["xpath"]["title"]).get_attribute("innerText")
+            config[source]["xpath"]["title"]
+        ).get_attribute("innerText")
         data["title"] = title
+        print("TITLE",title)
     except Exception as e:
         print("Warning: Can't fetch title "+str(e))
 
@@ -49,6 +53,20 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         data["content"] = data_handler.prepare_content(content)
     except Exception as e:
         print("Warning: Can't fetch content "+str(e))
+
+    try:
+        summary = wd.find_element_by_xpath(
+            config[source]["xpath"]["summary"]).get_attribute("innerText")
+        data["summary"] = data_handler.prepare_content(summary)
+    except Exception as e:
+        print("Warning: Can't fetch summary "+str(e))
+
+    try:
+        image_url = wd.find_element_by_xpath(
+            config[source]["xpath"]["image_url"]).get_attribute("src")
+        data["image_url"] = data_handler.prepare_content(image_url)
+    except Exception as e:
+        print("Warning: Can't fetch image_url "+str(e))
 
     try:
         date = wd.find_element_by_xpath(
@@ -71,18 +89,12 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         print("Warning: Can't tokenize content "+str(e))
     
     try:
-        sentiment = data_handler.sentiment(data["tokenize_content"])
-        data["sentiment"] = sentiment
-    except Exception as e:
-        print("Warning: Can't sentiment content" + str(e))
-    
-    try:
         created = datetime.datetime.now()
         data["created"] = created
     except Exception as e:
         print("Warning: Can't get datetime" + str(e))
         
-
+    wd.close()
     return data
 
 
@@ -94,6 +106,8 @@ date_range is a 2-string-elements tuple, format (d/m/y, d/m/y)
 
 
 def find_page_range(source, keyword, from_page, to_page, date_range):
+    wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
+
     if date_range == None:
         return (from_page, to_page)
 
@@ -191,10 +205,12 @@ def find_page_range(source, keyword, from_page, to_page, date_range):
                 rpage = mid_page
 
     print("FROM PAGE",page_limit_left,"TO PAGE:",page_limit_right)
+    
+    wd.close()
     return (page_limit_left, page_limit_right)
 
 
-def crawl(source="",symbol="posts", keyword="", from_page=1, to_page=10000, exit_when_url_exist=True, date_range=None):
+def crawl(source="",symbol="", keyword="", from_page=1, to_page=10000, exit_when_url_exist=True, date_range=None):
     wd = webdriver.Remote(CHROME_PATH, DesiredCapabilities.CHROME,options=wd_options)
     
     
@@ -239,12 +255,22 @@ def crawl(source="",symbol="posts", keyword="", from_page=1, to_page=10000, exit
                     source=source, post_link=link, keyword=keyword, symbol=symbol
                 )
                 postid = db.get_postID(url=link)
+                print("POST ID",postid)
                 if postid is None:
-                    db.insert_content_to_mysql(content=data["content"], published=data["date"], created=data["created"],url=link,tokenize_content=data["tokenize_content"], sentiment=data["sentiment"])
-                    newID = db.get_postID(url=link)
-                    db.insert_post_tags(postId=newID, symbol=symbol, keywordName=keyword)
-                else:
-                    db.insert_post_tags(postId=postid, symbol=symbol, keywordName=keyword)
+                    db.insert_content_to_mysql(title=data["title"], summary=data["summary"], published=data["date"], created=data["created"] ,url=link ,image_url=data["image_url"], tokenize_content=data["tokenize_content"])
+                    new_record += 1
+                    postid = db.get_postID(url=link)
+                    filtered_sentences = data_handler.get_sentences_contain_symbol(data["tokenize_content"],symbol)
+                    print("filtered sentences:",len(filtered_sentences))
+                    for sent in filtered_sentences:
+                        print(sent)
+                    for sentence in filtered_sentences:
+                        sentence_sentiment = ""
+                        try:
+                            sentence_sentiment = data_handler.sentiment(sentence)
+                        except Exception as e:
+                            print("Cannot sentiment sentence "+str(e))
+                        db.insert_post_tags(postId=postid, content=sentence, symbol=symbol, sentiment=sentence_sentiment)
             
     else:
         msg = "Cannot connect to mysql"
