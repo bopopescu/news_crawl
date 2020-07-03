@@ -78,6 +78,3 @@ GET http://localhost:9200/posts/_search/?pretty=true&from=[FROM_INDEX]&size=[SIZ
 ```FROM_INDEX```: number which indicates the starting point of the return results
 
 ```SIZE_OF_RETURN_OBJECTS```: the size of the returned ```hits``` array 
-
-## Author
-proxyht
