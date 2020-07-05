@@ -8,8 +8,8 @@ Post crawler by keyword
 
 1. Python
 2. Headless browser selenium
-3. Elastic search
-4. Kibana
+3. Redis
+4. Mysql
 
 ### Prerequisites
 
@@ -78,3 +78,17 @@ GET http://localhost:9200/posts/_search/?pretty=true&from=[FROM_INDEX]&size=[SIZ
 ```FROM_INDEX```: number which indicates the starting point of the return results
 
 ```SIZE_OF_RETURN_OBJECTS```: the size of the returned ```hits``` array 
+## Running crawler queue using redis
+Changing crawl to message queue using redis first in first out.
+Workflow:
+```
+crawler -> queue(Redis) -> controller -> Mysql
+```
+### How to run:
+``` docker-compose up ```
+``` pip install -r engine\requirements.txt```
+``` python jobredis.py``` for running queue job and crawl
+``` python mainmessage.py``` for running controller
+### Bug need fix:
+- ```UnboundLocalError: local variable 'docstr' referenced before assignment```
+- Can't not match keyword from database to content from message for extract sentences of symbol.

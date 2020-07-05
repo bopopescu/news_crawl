@@ -9,7 +9,7 @@ ELASTIC_CONFIG = {
 }
 
 MYSQL_CONFIG = {
-    "host": "192.168.41.19",
+    "host": "54.255.246.246",
     "port": "13306",
     "user": "sentiment",
     "passwd": "123456",

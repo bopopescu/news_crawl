@@ -5,6 +5,13 @@ services:
     image: selenium/standalone-chrome
     ports:
       - "4444:4444"
+  redis:
+        image: redis:latest
+        ports:
+            - 6379:6379
+        volumes:
+            - ./config/redis.conf:/redis.conf
+        command: [ "redis-server", "/redis.conf" ]
 
   #elasticsearch:
    # image: elasticsearch:7.6.2
@@ -34,8 +41,8 @@ services:
   #    - ./kibana.yml:/usr/share/kibana/config/kibana.yml
   #  depends_on:
   #    - elasticsearch
-networks:
-  elastic:
-volumes:
-  esdata:
-    driver: local
+#networks:
+#  elastic:
+#volumes:
+#  esdata:
+#    driver: local

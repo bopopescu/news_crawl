@@ -68,7 +68,7 @@ def get_sentences_contain_symbol(text,symbol):
 
 def sentiment(doc):
     x = [str(doc)]
-    model = load(SENTIMENT_MODEL_PATH)
+    model = load('D:\\news_crawl\\crawler_keyword\\engine\\model\\model.pkl')
     pred = model.predict(x)
     result = 'POS' if pred == ['up'] else 'NEG'
     return result
