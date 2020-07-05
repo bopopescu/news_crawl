@@ -85,10 +85,10 @@ Workflow:
 crawler -> queue(Redis) -> controller -> Mysql
 ```
 ### How to run:
-``` docker-compose up ```
-``` pip install -r engine\requirements.txt```
-``` python jobredis.py``` for running queue job and crawl
-``` python mainmessage.py``` for running controller
+- ``` docker-compose up ```
+- ``` pip install -r engine\requirements.txt```
+- ``` python jobredis.py``` for running queue job and crawl
+- ``` python mainmessage.py``` for running controller
 ### Bug need fix:
 - ```UnboundLocalError: local variable 'docstr' referenced before assignment```
 - Can't not match keyword from database to content from message for extract sentences of symbol.
