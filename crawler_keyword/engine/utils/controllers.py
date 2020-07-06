@@ -47,20 +47,25 @@ def controller():
         sentiment_of_symbol = sentiment(tokenize_docstr)
         db.insert_post_tags(postId=get_postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
     else:
-        doclist_of_symbol = []
-        clean_content = content.replace(',',' ')
-        sentences_of_content = splitter.split(clean_content)
-        for i in sentences_of_content:
-            res = [ele for ele in list_keywords if(ele in i)]
-            if res == []:    
-                pass
-            else:
-                doclist=doclist_of_symbol.append(i)
-                docstr_of = ' '.join(doclist)
-        output = docstr_of
-        tokenize_docstr = tokenize_content(output)
-        sentiment_of_symbol = sentiment(tokenize_docstr)
-        db.insert_post_tags(postId=postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+        check_post_tag = db.check_post_tag(postId=postid, symbol=symbol)
+        if check_post_tag is None:
+            
+            doclist_of_symbol = []
+            clean_content = content.replace(',',' ')
+            sentences_of_content = splitter.split(clean_content)
+            for i in sentences_of_content:
+                res = [ele for ele in list_keywords if(ele in i)]
+                if res == []:    
+                    pass
+                else:
+                    doclist=doclist_of_symbol.append(i)
+                    docstr_of = ' '.join(doclist)
+            output = docstr_of
+            tokenize_docstr = tokenize_content(output)
+            sentiment_of_symbol = sentiment(tokenize_docstr)
+            db.insert_post_tags(postId=postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+        else:
+            pass
             
         
         

@@ -26,7 +26,7 @@ def get_all_stock_ticket():
 
 def get_keywords_by_stock_ticket(stock_ticket:str):
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT keywords.name from keywords,stock_keywords where keywords.id = stock_keywords.keywordId and stock_keywords.symbol = '{}'".format(stock_ticket))
+    mycursor.execute("SELECT keywords.name from keywords,crawl_keys where keywords.id = crawl_keys.keywordId and crawl_keys.symbol = '{}'".format(stock_ticket))
     results = mycursor.fetchall()
     return [result[0] for result in results]
 def get_symbol():
@@ -67,8 +67,13 @@ def insert_post_tags(postId="", content="", symbol="", sentiment=""):
     mycursor.execute(query,args)
     mydb.commit()
     return None
-
-
+def check_post_tag(postId="", symbol=""):
+    mycursor = mydb.cursor()
+    query = "select id from post_tags where postId = '{}' and symbol = '{}'".format(postId,symbol)
+    mycursor.execute(query)
+    result = mycursor.fetchone()
+    result = result[0] if result != None else None
+    return result
 
 
 
