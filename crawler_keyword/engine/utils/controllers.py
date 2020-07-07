@@ -15,7 +15,8 @@ from sentence_splitter import SentenceSplitter, split_text_into_sentences
 
 q = RedisQueue()
 splitter = SentenceSplitter(language='en')
-sentiment = data_handler.sentiment()
+sentiment = data_handler.sentiment
+
 def controller():
     data = q.get()
     url = data[b'url'].decode('utf8')
@@ -29,6 +30,7 @@ def controller():
     created = data[b'created'].decode('utf8')
     postid = db.get_postID(url=url)
     list_keywords = db.get_keywords_by_stock_ticket(stock_ticket=symbol)
+    
     print("POST ID",postid)
     if postid is None:
         db.insert_content_to_mysql(title=title, summary=summary, published=date, created=created ,url=url ,image_url=image_url, tokenize_content=tokenize_content)
@@ -36,35 +38,30 @@ def controller():
         doclist_of_symbol = []
         clean_content = content.replace(',',' ')
         sentences_of_content = splitter.split(clean_content)
-        for i in sentences_of_content:
-            res = [ele for ele in list_keywords if(ele in i)]
-            if res == []:    
-                pass
-            else:
-                doclist= doclist_of_symbol.append(i)
-                docstr = ' '.join(doclist)
+
+        doclist = data_handler.get_sentences_contain_keywords(text=tokenize_content,keywords=list_keywords)
+
+        print("LIST KW",list_keywords)
+        print("DOCLIST",doclist)
+        docstr = " ".join(doclist)
         output = docstr
-        tokenize_docstr = tokenize_content(output)
-        sentiment_of_symbol = sentiment(tokenize_docstr)
-        db.insert_post_tags(postId=get_postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+        print("OUTPUT",output)
+        print("SENTENCES",len(sentences_of_content))
+        print("DOCSTR",len(docstr))
+        # tokenize_docstr = tokenize_content(output)
+        if len(docstr) > 0:
+            sentiment_of_symbol = sentiment(output)
+            db.insert_post_tags(postId=get_postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
     else:
         check_post_tag = db.check_post_tag(postId=postid, symbol=symbol)
         if check_post_tag is None:
-            
-            doclist_of_symbol = []
-            clean_content = content.replace(',',' ')
-            sentences_of_content = splitter.split(clean_content)
-            for i in sentences_of_content:
-                res = [ele for ele in list_keywords if(ele in i)]
-                if res == []:    
-                    pass
-                else:
-                    doclist=doclist_of_symbol.append(i)
-                    docstr_of = ' '.join(doclist)
-            output = docstr_of
-            tokenize_docstr = tokenize_content(output)
-            sentiment_of_symbol = sentiment(tokenize_docstr)
-            db.insert_post_tags(postId=postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+            doclist = data_handler.get_sentences_contain_keywords(text=tokenize_content,keywords=list_keywords)
+            docstr = ' '.join(doclist)
+            output = docstr
+
+            if len(docstr) > 0:
+                sentiment_of_symbol = sentiment(output)
+                db.insert_post_tags(postId=postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
         else:
             pass
             

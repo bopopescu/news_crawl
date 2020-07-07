@@ -1,7 +1,7 @@
 CHROME_PATH = "http://127.0.0.1:4444/wd/hub"
 LOGGING_PATH = "./logging"
 
-SENTIMENT_MODEL_PATH = "/model/model.pkl"
+SENTIMENT_MODEL_PATH = "model/model.pkl"
 
 ELASTIC_CONFIG = {
     "host": "192.168.41.19",
@@ -9,10 +9,10 @@ ELASTIC_CONFIG = {
 }
 
 MYSQL_CONFIG = {
-    "host": "54.255.246.246",
-    "port": "13306",
-    "user": "sentiment",
-    "passwd": "123456",
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "passwd": "",
     "database": "sentiment",
 }
 

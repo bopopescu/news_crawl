@@ -66,9 +66,24 @@ def get_sentences_contain_symbol(text,symbol):
     sentences = splitter.split(text=text.replace(","," "))
     return [sentence for sentence in sentences if re.search('(?i){}'.format(symbol),sentence)]
 
+def get_sentences_contain_keywords(text,keywords):
+    sentences = splitter.split(text=text.replace(","," "))
+    result = []
+
+    for sent in sentences:
+        keep = False 
+        for keyword in keywords:
+            if keyword in sent:
+                keep = True
+                break
+        if keep:
+            result.append(sent)
+    
+    return result
+
 def sentiment(doc):
     x = [str(doc)]
-    model = load('D:\\news_crawl\\crawler_keyword\\engine\\model\\model.pkl')
+    model = load(SENTIMENT_MODEL_PATH)
     pred = model.predict(x)
     result = 'POS' if pred == ['up'] else 'NEG'
     return result
