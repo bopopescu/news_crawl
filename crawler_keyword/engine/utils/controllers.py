@@ -15,6 +15,7 @@ from sentence_splitter import SentenceSplitter, split_text_into_sentences
 
 q = RedisQueue()
 splitter = SentenceSplitter(language='en')
+sentiment = data_handler.sentiment()
 def controller():
     data = q.get()
     url = data[b'url'].decode('utf8')
