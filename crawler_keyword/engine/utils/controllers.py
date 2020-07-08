@@ -38,9 +38,10 @@ def controller():
 
         print("LIST KW",list_keywords)
         docstr = " ".join(doclist)
-        print("DOCLIST",doclist)
         tokenize_docstr = data_handler.tokenize_content(docstr)
-        if len(docstr) > 0:
+        print("TOKENIZE DOCSTR",tokenize_docstr)
+        
+        if len(tokenize_docstr) > 0:
             sentiment_of_symbol = sentiment(tokenize_docstr)
             db.insert_post_tags(postId=get_postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
     else:
@@ -48,11 +49,12 @@ def controller():
         if check_post_tag is None:
             doclist = data_handler.get_sentences_contain_keywords(text=content,keywords=list_keywords)
             print("LIST KW",list_keywords)
+            
             docstr = " . ".join(doclist)
-            print("DOCSTR",len(docstr))
             tokenize_docstr = data_handler.tokenize_content(docstr)
+            print("TOKENIZE DOCSTR",tokenize_docstr)
 
-            if len(docstr) > 0:
+            if len(tokenize_docstr) > 0:
                 sentiment_of_symbol = sentiment(tokenize_docstr)
                 db.insert_post_tags(postId=postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
         else:
