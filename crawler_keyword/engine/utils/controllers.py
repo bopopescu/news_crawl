@@ -33,40 +33,28 @@ def controller():
     if postid is None:
         db.insert_content_to_mysql(title=title, summary=summary, published=date, created=created ,url=url ,image_url=image_url, tokenize_content=tokenize_content)
         get_postid = db.get_postID(url=url)
-        doclist_of_symbol = []
-        clean_content = content.replace(',',' ')
-        sentences_of_content = splitter.split(clean_content)
-        doclist = data_handler.get_sentences_contain_keywords(text=clean_content,keywords=list_keywords)
+
+        doclist = data_handler.get_sentences_contain_keywords(text=content,keywords=list_keywords)
+
         print("LIST KW",list_keywords)
-        print("DOCLIST",doclist)
         docstr = " ".join(doclist)
-        output = docstr
-        print("OUTPUT",output)
-        print("SENTENCES",len(sentences_of_content))
-        print("DOCSTR",len(docstr))
-        tokenize_docstr = data_handler.tokenize_content(output)
+        print("DOCLIST",doclist)
+        tokenize_docstr = data_handler.tokenize_content(docstr)
         if len(docstr) > 0:
             sentiment_of_symbol = sentiment(tokenize_docstr)
-            db.insert_post_tags(postId=get_postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+            db.insert_post_tags(postId=get_postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
     else:
         check_post_tag = db.check_post_tag(postId=postid, symbol=symbol)
         if check_post_tag is None:
-            doclist_of_symbol = []
-            clean_content = content.replace(',',' ')
-            sentences_of_content = splitter.split(clean_content)
-            doclist = data_handler.get_sentences_contain_keywords(text=clean_content,keywords=list_keywords)
+            doclist = data_handler.get_sentences_contain_keywords(text=content,keywords=list_keywords)
             print("LIST KW",list_keywords)
-            print("DOCLIST",doclist)
-            docstr = ' '.join(doclist)
-            output = docstr
-            print("OUTPUT",output)
-            print("SENTENCES",len(sentences_of_content))
+            docstr = " . ".join(doclist)
             print("DOCSTR",len(docstr))
-            tokenize_docstr = data_handler.tokenize_content(output)
+            tokenize_docstr = data_handler.tokenize_content(docstr)
 
             if len(docstr) > 0:
                 sentiment_of_symbol = sentiment(tokenize_docstr)
-                db.insert_post_tags(postId=postid, content=output, symbol=symbol, sentiment=sentiment_of_symbol)
+                db.insert_post_tags(postId=postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
         else:
             pass
         
