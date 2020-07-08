@@ -16,14 +16,13 @@ create table posts
 (
     id               bigint auto_increment
         primary key,
-    title            varchar(500) charset utf8  null,
-    content          text charset utf8          null,
-    summary          text charset utf8          null,
-    published        datetime                   null,
-    created          datetime                   null,
-    url              varchar(255)               null,
-    image_url        varchar(255)               null,
-    tokenize_content varchar(5000) charset utf8 null
+    title            varchar(500) charset utf8 null,
+    summary          text charset utf8         null,
+    published        datetime                  null,
+    created          datetime                  null,
+    url              varchar(255)              null,
+    image_url        varchar(255)              null,
+    tokenize_content longtext charset utf8     null
 );
 
 create table post_ratings
@@ -53,12 +52,12 @@ create table stocks
 
 create table post_tags
 (
-    id          bigint auto_increment
+    id        bigint auto_increment
         primary key,
-    postId      bigint                    null,
-    symbol      varchar(20)               null,
-    keywordName varchar(255) charset utf8 null,
-    sentiment   varchar(3)                null,
+    postId    bigint                null,
+    symbol    varchar(20)           null,
+    content   longtext charset utf8 null,
+    sentiment varchar(3)            null,
     constraint post_tags_ibfk_1
         foreign key (postId) references posts (id),
     constraint post_tags_ibfk_2
