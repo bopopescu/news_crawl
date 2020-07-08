@@ -69,11 +69,11 @@ def get_sentences_contain_symbol(text,symbol):
 def get_sentences_contain_keywords(text,keywords):
     sentences = splitter.split(text=text.replace(","," "))
     result = []
-
+    
     for sent in sentences:
         keep = False 
         for keyword in keywords:
-            if keyword in sent:
+            if re.search("(?i){}".format(keyword),sent):
                 keep = True
                 break
         if keep:
