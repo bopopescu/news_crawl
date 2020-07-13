@@ -22,7 +22,8 @@ create table posts
     created          datetime                  null,
     url              varchar(255)              null,
     image_url        varchar(255)              null,
-    tokenize_content longtext charset utf8     null
+    tokenize_content longtext charset utf8     null,
+    is_ready         bit                       null
 );
 
 create table post_ratings
