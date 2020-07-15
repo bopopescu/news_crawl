@@ -92,3 +92,9 @@ crawler -> queue(Redis) -> controller -> Mysql
 ### Bug need fix:
 - ```UnboundLocalError: local variable 'docstr' referenced before assignment```
 - Can't not match keyword from database to content from message for extract sentences of symbol.
+### Need to do:
+- [] Docker to run 
+- [] Time sleep time run new main to run all.
+- [] update field ```content, sentiment ``` to ```posts```
+- [] fix message from queue to controller.
+- [] Documentation for delivery

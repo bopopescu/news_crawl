@@ -5,12 +5,17 @@ import datetime
 import utils.data as data_handler
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from cfg.config import config, CHROME_PATH
+from cfg.config import config, CHROME_PATH, IMAGE_PATH
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from cfg.config import config
 import utils.mysqlutils as db
 from utils.redisquene import RedisQueue
+import urllib.parse as urlparse
+from urllib.parse import parse_qs
+import requests
+from pathlib import Path
+import ntpath
 
 q = RedisQueue()
 
@@ -32,6 +37,7 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         "title": "",
         "summary": "",
         "image_url": "",
+        "image": "",
         "content": "",
         "date": "",
         "author": "",
@@ -67,9 +73,20 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
     try:
         image_url = wd.find_element_by_xpath(
             config[source]["xpath"]["image_url"]).get_attribute("src")
+        print(image_url)
         data["image_url"] = data_handler.prepare_content(image_url)
     except Exception as e:
         print("Warning: Can't fetch image_url "+str(e))
+    try:
+        response = requests.get(data["image_url"])
+        parsed = urlparse.urlparse(data["image_url"]).path
+        image = ntpath.split(parsed)[1]
+        savefilename = Path(IMAGE_PATH + source + '_' + image)
+        #print(savefilename)
+        savefilename.write_bytes(response.content)
+        data['image'] = image
+    except Exception as e:
+        print("Warning: Can't get image "+str(e))
 
     try:
         date = wd.find_element_by_xpath(
@@ -246,25 +263,8 @@ def crawl(source="",symbol="", keyword="", from_page=1, to_page=10000, exit_when
                 data = get_post_content_from_link(
                     source=source, post_link=link, keyword=keyword, symbol=symbol
                 )
-                #postid = db.get_postID(url=link)
-                #print("POST ID",postid)
                 q.put(data)
-                #if postid is None:
-                    #q.put(data)
-                    #db.insert_content_to_mysql(title=data["title"], summary=data["summary"], published=data["date"], created=data["created"] ,url=link ,image_url=data["image_url"], tokenize_content=data["tokenize_content"])
-                    #new_record += 1
-                    #postid = db.get_postID(url=link)
-                    #filtered_sentences = data_handler.get_sentences_contain_symbol(data["content"],symbol)
-                    #print("filtered sentences:",len(filtered_sentences))
-                    #for sent in filtered_sentences:
-                        #print(sent)
-                    #for sentence in filtered_sentences:
-                        #sentence_sentiment = ""
-                        #try:
-                            #sentence_sentiment = data_handler.sentiment(sentence)
-                        #except Exception as e:
-                            #print("Cannot sentiment sentence "+str(e))
-                        #db.insert_post_tags(postId=postid, content=sentence, symbol=symbol, sentiment=sentence_sentiment)
+                
             
     else:
         msg = "Cannot connect to redis"
@@ -275,3 +275,4 @@ def crawl(source="",symbol="", keyword="", from_page=1, to_page=10000, exit_when
         "new_record": new_record,
         "msg": msg
     }
+

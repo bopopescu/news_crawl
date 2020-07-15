@@ -27,14 +27,19 @@ class RedisQueue(object):
         self.__db.hmset(self.message_prefix + key, item)
         self.__db.lpush(self.queue, key)
 
-    def get(self, block=True, timeout=None):
-        key = self.__db.rpop(self.queue).decode('utf8')
-        item = self.__db.hgetall(self.message_prefix + key)
+    def get(self, timeout=None):
+        key = self.__db.rpop(self.queue)
+        if key is not None:
+        
+            key = key.decode('utf8')
+            item = self.__db.hgetall(self.message_prefix + key)
+    
 
-        print(self.message_prefix + key)
-        self.__db.hdel(self.message_prefix + key, *item.keys())
+            print(self.message_prefix + key)
+            self.__db.hdel(self.message_prefix + key, *item.keys())
 
-        return item
+            return item
+        return  None
 
     def get_nowait(self):
         """Equivalent to get(False)."""
