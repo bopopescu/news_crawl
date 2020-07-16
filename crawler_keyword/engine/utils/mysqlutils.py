@@ -40,11 +40,11 @@ def get_keywords_by_symbol(symbol:str):
     results = mycursor.fetchall()
     return [results[0] for result in results]
 
-def insert_content_to_mysql(title="", summary="", published="", created="" ,url="" ,image_url="", tokenize_content=""):
+def insert_content_to_mysql(title="", summary="", published="", created="" ,url="" ,image_url="", tokenize_content="",content=""):
     mycursor = mydb.cursor()
     try:
-        query = "insert into posts(title,summary,published,created,url,image_url,tokenize_content) values(%s,%s,%s,%s,%s,%s,%s)"
-        args = (title, summary, published, created, url, image_url, tokenize_content)
+        query = "insert into posts(title,summary,published,created,url,image_url,tokenize_content,content) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+        args = (title, summary, published, created, url, image_url, tokenize_content, content)
         mycursor.execute(query,args)
         mydb.commit()
         mycursor.reset
@@ -65,8 +65,11 @@ def insert_post_tags(postId="", content="", symbol="", sentiment=""):
     query = "insert into post_tags(postId,content,symbol,sentiment) values(%s,%s,%s,%s)"
     args = (postId,content,symbol,sentiment)
     mycursor.execute(query,args)
+    query_is_ready = "update posts set is_ready = 1 where id = '{}'".format(postId)
+    mycursor.execute(query_is_ready)
     mydb.commit()
     return None
+
 def check_post_tag(postId="", symbol=""):
     mycursor = mydb.cursor()
     query = "select id from post_tags where postId = '{}' and symbol = '{}'".format(postId,symbol)
@@ -74,6 +77,8 @@ def check_post_tag(postId="", symbol=""):
     result = mycursor.fetchone()
     result = result[0] if result != None else None
     return result
+
+
 
 
 

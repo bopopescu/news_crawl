@@ -24,15 +24,17 @@ def controller():
     symbol = data[b'symbol'].decode('utf8')
     summary = data[b'summary'].decode('utf8')
     date = data[b'date'].decode('utf8')
-    image_url = data[b'image_url'].decode('utf8')
+    image_url = data[b'image'].decode('utf8')
     title = data[b'title'].decode('utf8')
     created = data[b'created'].decode('utf8')
     postid = db.get_postID(url=url)
     list_keywords = db.get_keywords_by_stock_ticket(stock_ticket=symbol)
     print("POST ID",postid)
     if postid is None:
-        db.insert_content_to_mysql(title=title, summary=summary, published=date, created=created ,url=url ,image_url=image_url, tokenize_content=tokenize_content)
+        db.insert_content_to_mysql(title=title, summary=summary, published=date, created=created ,url=url ,image_url=image_url, tokenize_content=tokenize_content,content = content)
+        print(url)
         get_postid = db.get_postID(url=url)
+        print("NEW POST ID",get_postid)
 
         doclist = data_handler.get_sentences_contain_keywords(text=content,keywords=list_keywords)
 
@@ -44,6 +46,9 @@ def controller():
         if len(tokenize_docstr) > 0:
             sentiment_of_symbol = sentiment(tokenize_docstr)
             db.insert_post_tags(postId=get_postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
+        else:
+            sentiment_of_symbol = sentiment(tokenize_content)
+            db.insert_post_tags(postId=get_postid, content=content, symbol=symbol, sentiment=sentiment_of_symbol)
     else:
         check_post_tag = db.check_post_tag(postId=postid, symbol=symbol)
         if check_post_tag is None:
@@ -57,10 +62,9 @@ def controller():
             if len(tokenize_docstr) > 0:
                 sentiment_of_symbol = sentiment(tokenize_docstr)
                 db.insert_post_tags(postId=postid, content=tokenize_docstr, symbol=symbol, sentiment=sentiment_of_symbol)
+            else:
+                sentiment_of_symbol = sentiment(tokenize_content)
+                db.insert_post_tags(postId=postid, content=tokenize_content, symbol=symbol, sentiment=sentiment_of_symbol)
         else:
             pass
-        
-        
-    
-    
     

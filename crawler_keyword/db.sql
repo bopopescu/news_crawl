@@ -23,7 +23,8 @@ create table posts
     url              varchar(255)              null,
     image_url        varchar(255)              null,
     tokenize_content longtext charset utf8     null,
-    is_ready         bit                       null
+    is_ready         bit                       null,
+    content          longtext                  null
 );
 
 create table post_ratings

@@ -1,2 +1,5 @@
 import utils.controllers as controller
-controller.controller()
+import time
+while True:
+    run = controller.controller()
+    time.sleep(5)

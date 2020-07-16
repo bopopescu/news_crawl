@@ -16,6 +16,7 @@ from urllib.parse import parse_qs
 import requests
 from pathlib import Path
 import ntpath
+import os
 
 q = RedisQueue()
 
@@ -38,6 +39,7 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         "summary": "",
         "image_url": "",
         "image": "",
+        "content_process": "",
         "content": "",
         "date": "",
         "author": "",
@@ -57,9 +59,15 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         print("Warning: Can't fetch title "+str(e))
 
     try:
+        content_process = wd.find_element_by_xpath(
+            config[source]["xpath"]["content"]).get_attribute("innerText")
+        data["content_process"] = data_handler.prepare_content(content)
+    except Exception as e:
+        print("Warning: Can't fetch content "+str(e))
+    try:
         content = wd.find_element_by_xpath(
             config[source]["xpath"]["content"]).get_attribute("innerText")
-        data["content"] = data_handler.prepare_content(content)
+        data["content"] = data_handler.prepare_content_to_show(content)
     except Exception as e:
         print("Warning: Can't fetch content "+str(e))
 
@@ -81,10 +89,13 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         response = requests.get(data["image_url"])
         parsed = urlparse.urlparse(data["image_url"]).path
         image = ntpath.split(parsed)[1]
-        savefilename = Path(IMAGE_PATH + source + '_' + image)
+        path_image = IMAGE_PATH + source
+        if not os.path.exists(path_iamge):
+            os.makedirs(path_image)
+        savefilename = Path(path_image + '/' + image)
         #print(savefilename)
         savefilename.write_bytes(response.content)
-        data['image'] = image
+        data['image'] = source + '/' + image
     except Exception as e:
         print("Warning: Can't get image "+str(e))
 
@@ -92,6 +103,7 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         date = wd.find_element_by_xpath(
             config[source]["xpath"]["date"]).get_attribute("innerText")
         data["date"] = str(data_handler.convert_to_mysql_datetime(date))
+        print("DATE: ", data["date"] )
     except Exception as e:
         print("Warning: Can't fetch date "+str(e))
 
@@ -103,7 +115,7 @@ def get_post_content_from_link(source="", post_link="", keyword="", symbol=""):
         print("Warning: Can't fetch author "+str(e))
 
     try:
-        tokenize_content = data_handler.tokenize_content(data["content"])
+        tokenize_content = data_handler.tokenize_content(data["content_process"])
         data["tokenize_content"] = tokenize_content
     except Exception as e:
         print("Warning: Can't tokenize content "+str(e))

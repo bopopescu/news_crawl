@@ -35,8 +35,8 @@ config = {
         }
     },
     "vnexpress":{
-        "pagination_url": "https://timkiem.vnexpress.net/?q={:s}&page={:d}",
-        "page_url": "https://timkiem.vnexpress.net/?q={$keyword$}&page={$page$}",
+        "pagination_url": "https://timkiem.vnexpress.net/?q={:s}&cate_code=kinhdoanh&page={:d}",
+        "page_url": "https://timkiem.vnexpress.net/?q={$keyword$}&cate_code=kinhdoanh&page={$page$}",
         "xpath": {
             "post_links": "//div[@class='width_common list-news-subfolder']//article[@class='item-news item-news-common']//h3[@class='title-news']//a",
             "date": "//span[@class='date']",

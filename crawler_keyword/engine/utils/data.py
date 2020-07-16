@@ -46,6 +46,15 @@ def convert_to_mysql_datetime(raw_date):
 """
 Remove image, table, html tags from text
 """
+def prepare_content_to_show(text):
+    img_filter = "<img.*?>"
+    table_filter = "<table(.|\n)*?</table>"
+    tag_filter = "<.*?>"
+    result = text
+    result = re.sub(img_filter,"",result)
+    result = re.sub(table_filter,"",result)
+    result = re.sub(tag_filter,"",result)
+    return result
 def prepare_content(text):
     img_filter = "<img.*?>"
     table_filter = "<table(.|\n)*?</table>"
@@ -69,7 +78,7 @@ def get_sentences_contain_symbol(text,symbol):
 def get_sentences_contain_keywords(text,keywords):
     sentences = splitter.split(text=text.replace(","," "))
     result = []
-    
+
     for sent in sentences:
         keep = False 
         for keyword in keywords:
@@ -78,7 +87,7 @@ def get_sentences_contain_keywords(text,keywords):
                 break
         if keep:
             result.append(sent)
-    
+
     return result
 
 def sentiment(doc):
