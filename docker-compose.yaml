@@ -1,0 +1,55 @@
+version: "3.1"
+
+services:
+  front:
+    build: ./smart-sentiment
+    image: smart-sentiment
+    restart: always
+    ports:
+      - 80:5000
+    environment:
+      - MYSQL_SERVER=db
+      - MYSQL_PORT=3306
+      - MYSQL_DB=sentiment
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  db:
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=sentiment
+    restart: always
+    healthcheck:
+      test: mysqladmin -uroot -p${MYSQL_PASSWORD} ping
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    volumes:
+      - ${MYSQL_HOST_PATH}:/var/lib/mysql
+  standalone-chrome:
+    image: selenium/standalone-chrome
+  redis:
+    image: redis:alpine
+  elasticsearch:
+    image: blacktop/elasticsearch:${ELASTIC_VERSION}
+    environment:
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ${ES_HOST_PATH}:/usr/share/elasticsearch/data
+  kibana:
+    image: blacktop/kibana:${ELASTIC_VERSION}
+    restart: always
+    ports:
+      - 5601:5601
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

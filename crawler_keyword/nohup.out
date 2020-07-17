@@ -1,0 +1,1688 @@
+[I 14:10:49.625 NotebookApp] Serving notebooks from local directory: /home/hatt2/news_crawl
+[I 14:10:49.625 NotebookApp] The Jupyter Notebook is running at:
+[I 14:10:49.625 NotebookApp] http://anphat02-X299X-AORUS-MASTER:8888/?token=12118c0db12522c78a660affa64d5915b63528f3dc72daf3
+[I 14:10:49.625 NotebookApp]  or http://127.0.0.1:8888/?token=12118c0db12522c78a660affa64d5915b63528f3dc72daf3
+[I 14:10:49.625 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 14:10:49.627 NotebookApp] No web browser found: could not locate runnable browser.
+[C 14:10:49.627 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/hatt2/.local/share/jupyter/runtime/nbserver-129566-open.html
+    Or copy and paste one of these URLs:
+        http://anphat02-X299X-AORUS-MASTER:8888/?token=12118c0db12522c78a660affa64d5915b63528f3dc72daf3
+     or http://127.0.0.1:8888/?token=12118c0db12522c78a660affa64d5915b63528f3dc72daf3
+[I 14:11:25.834 NotebookApp] 302 GET /?token=12118c0db12522c78a660affa64d5915b63528f3dc72daf3 (192.168.41.45) 1.38ms
+[I 14:19:54.283 NotebookApp] New terminal with automatic name: 1
+[I 14:20:27.354 NotebookApp] Creating new notebook in /crawler_keyword/engine
+[I 14:20:28.116 NotebookApp] Kernel started: 88e80209-66a9-4fea-8a8f-8a72863fd61d
+[I 14:20:29.663 NotebookApp] Starting buffering for 88e80209-66a9-4fea-8a8f-8a72863fd61d:643a5fb3b31e435d8349066c60ec0c58
+[I 14:20:34.529 NotebookApp] New terminal with automatic name: 2
+[I 14:21:48.477 NotebookApp] Kernel shutdown: 88e80209-66a9-4fea-8a8f-8a72863fd61d
+[W 14:21:48.783 NotebookApp] delete /crawler_keyword/engine/Untitled.ipynb
+[I 14:25:14.651 NotebookApp] Saving file at /crawler_keyword/engine/job.py
+[I 14:25:14.838 NotebookApp] Saving file at /crawler_keyword/engine/job.py
+[I 14:25:24.903 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 14:28:36.240 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:36.418 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:36.596 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:36.841 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:37.105 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:37.319 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:28:37.535 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:30:19.321 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:30:19.483 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:31:45.423 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:31:45.619 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:31:45.765 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:34:07.742 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 16:12:59.350 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v2.py
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(46, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(46, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 139, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/terminado/management.py", line 196, in pty_read
+    s = ptywclients.ptyproc.read(65536)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/ptyprocess/ptyprocess.py", line 819, in read
+    return self.decoder.decode(b, final=False)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 23-24: invalid continuation byte
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(46, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(46, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 139, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/terminado/management.py", line 196, in pty_read
+    s = ptywclients.ptyproc.read(65536)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/ptyprocess/ptyprocess.py", line 819, in read
+    return self.decoder.decode(b, final=False)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 23-24: invalid continuation byte
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(46, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(46, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 139, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/terminado/management.py", line 196, in pty_read
+    s = ptywclients.ptyproc.read(65536)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/ptyprocess/ptyprocess.py", line 819, in read
+    return self.decoder.decode(b, final=False)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 23-24: invalid continuation byte
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(46, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(46, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 139, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/terminado/management.py", line 196, in pty_read
+    s = ptywclients.ptyproc.read(65536)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/ptyprocess/ptyprocess.py", line 819, in read
+    return self.decoder.decode(b, final=False)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 23-24: invalid continuation byte
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(46, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(46, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/events.py", line 145, in _run
+    self._callback(*self._args)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/tornado/platform/asyncio.py", line 139, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/terminado/management.py", line 196, in pty_read
+    s = ptywclients.ptyproc.read(65536)
+  File "/home/hatt2/.local/lib/python3.6/site-packages/ptyprocess/ptyprocess.py", line 819, in read
+    return self.decoder.decode(b, final=False)
+  File "/usr/lib/python3.6/codecs.py", line 321, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 23-24: invalid continuation byte
+[I 16:27:44.308 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:14:29.693 NotebookApp] 302 GET / (192.168.41.45) 0.92ms
+[I 10:37:55.358 NotebookApp] New terminal with automatic name: 3
+[I 10:39:08.501 NotebookApp] Creating new directory in /crawler_keyword
+[I 10:39:43.091 NotebookApp] Uploading file to /crawler_keyword/config/redis.conf
+[I 10:40:06.168 NotebookApp] Saving file at /crawler_keyword/docker-compose.yml
+[I 10:48:36.452 NotebookApp] Creating new notebook in /crawler_keyword
+[I 10:48:37.090 NotebookApp] Kernel started: fd0bf80e-c71f-4554-863a-20d8d8a88e7b
+[I 10:48:49.120 NotebookApp] New terminal with automatic name: 4
+[I 10:49:01.835 NotebookApp] Starting buffering for fd0bf80e-c71f-4554-863a-20d8d8a88e7b:1b4fbae59c0e44a5846706da6946ddb0
+[I 10:49:09.154 NotebookApp] Starting buffering for fd0bf80e-c71f-4554-863a-20d8d8a88e7b:ffac784f810e4d0f89d0c23c60ca540e
+[I 10:49:09.164 NotebookApp] Saving file at /crawler_keyword/Untitled.ipynb
+[I 10:49:16.092 NotebookApp] Kernel shutdown: fd0bf80e-c71f-4554-863a-20d8d8a88e7b
+[W 10:49:16.397 NotebookApp] delete /crawler_keyword/Untitled.ipynb
+[I 10:49:20.769 NotebookApp] Creating new notebook in /crawler_keyword
+[I 10:49:21.192 NotebookApp] Kernel started: 63e9f48b-8ded-4e8b-bc3a-e072e7cb3a30
+[I 10:49:30.905 NotebookApp] Starting buffering for 63e9f48b-8ded-4e8b-bc3a-e072e7cb3a30:9611a570553a4a518ecccdbcf18e76fb
+[I 10:49:35.273 NotebookApp] Kernel shutdown: 63e9f48b-8ded-4e8b-bc3a-e072e7cb3a30
+[W 10:49:35.578 NotebookApp] delete /crawler_keyword/Untitled.ipynb
+[I 10:50:25.193 NotebookApp] Creating new notebook in /crawler_keyword
+[I 10:50:25.915 NotebookApp] Kernel started: 97ac65f4-7077-41aa-9e36-51361913582e
+[I 10:52:26.432 NotebookApp] Saving file at /crawler_keyword/Untitled.ipynb
+[I 10:54:25.951 NotebookApp] Saving file at /crawler_keyword/Untitled.ipynb
+[I 10:56:26.427 NotebookApp] Saving file at /crawler_keyword/Untitled.ipynb
+[I 12:16:57.759 NotebookApp] Starting buffering for 97ac65f4-7077-41aa-9e36-51361913582e:19dbe7e211ec434c8fc55141dd4c6a56
+[I 13:00:24.591 NotebookApp] Restoring connection for 97ac65f4-7077-41aa-9e36-51361913582e:19dbe7e211ec434c8fc55141dd4c6a56
+[I 14:01:11.605 NotebookApp] Creating new file in /crawler_keyword/engine/utils
+[I 14:23:38.371 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisutils.py
+[I 14:23:38.590 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisutils.py
+[I 14:56:31.090 NotebookApp] Creating new file in /crawler_keyword/engine/utils
+[I 15:23:15.503 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:15.683 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:15.831 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:16.191 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:16.305 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:16.360 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:16.565 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:23:16.733 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:10.806 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.005 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.179 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.371 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.547 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.725 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:11.926 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:12.147 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:12.347 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:12.547 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:12.776 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:12.972 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:13.162 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:13.381 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:13.612 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 15:52:13.815 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[W 15:53:28.599 NotebookApp] delete /crawler_keyword/engine/utils/redisutils.py
+[I 15:57:20.242 NotebookApp] Creating new file in /crawler_keyword/engine/utils
+[I 16:04:36.845 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:19:35.999 NotebookApp] Creating new file in /crawler_keyword/engine
+[I 16:20:32.756 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:32.978 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:33.150 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:33.326 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:33.526 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:33.735 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:33.936 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:34.150 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:34.341 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:20:52.814 NotebookApp] New terminal with automatic name: 5
+[I 16:22:53.524 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:53.707 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:53.930 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:23:50.581 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:23:50.778 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:26:19.907 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:26:20.136 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:26:20.320 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:26:20.523 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:26:20.729 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:14.484 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:14.662 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:14.849 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.009 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.163 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.339 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.519 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.791 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:15.885 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.040 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.211 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.369 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.543 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.654 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:16.838 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:17.208 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:28:17.364 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:30:59.451 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:30:59.645 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:30:59.812 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:30:59.935 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:31:50.242 NotebookApp] Creating new notebook in /crawler_keyword/engine
+[I 16:31:50.732 NotebookApp] Kernel started: 5be6052f-cae8-41b0-b3d9-9b62383a8b08
+[I 16:33:51.597 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 16:33:57.568 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:57.776 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:57.927 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:58.160 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:58.295 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:58.503 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:58.629 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:33:58.812 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:26.686 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:26.881 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:27.075 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:27.252 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:27.428 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:27.625 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:27.830 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:28.028 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:28.220 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:28.422 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:28.618 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:28.800 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:29.010 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:29.193 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:37:29.388 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:38.686 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:38.928 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:39.098 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:39.313 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:39.724 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:39:39.884 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:43:50.784 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 17:11:17.318 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:17.530 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:17.713 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:17.903 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:18.046 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:18.232 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:18.466 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:28.929 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:29.127 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:29.321 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:11:29.480 NotebookApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 17:40:45.613 NotebookApp] Starting buffering for 5be6052f-cae8-41b0-b3d9-9b62383a8b08:011346825dcd445eab2ef06969842264
+[I 17:40:45.620 NotebookApp] Starting buffering for 97ac65f4-7077-41aa-9e36-51361913582e:19dbe7e211ec434c8fc55141dd4c6a56
+[I 08:52:52.181 NotebookApp] 302 GET / (192.168.41.45) 0.95ms
+[I 08:53:39.000 NotebookApp] Kernel shutdown: 97ac65f4-7077-41aa-9e36-51361913582e
+[I 08:53:40.123 NotebookApp] Kernel shutdown: 5be6052f-cae8-41b0-b3d9-9b62383a8b08
+[I 08:54:22.024 NotebookApp] Creating new file in /crawler_keyword/engine/utils
+[I 09:07:54.142 NotebookApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:16:50.473 NotebookApp] Kernel started: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 09:26:48.495 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 09:26:48.815 NotebookApp] Kernel restarted: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 09:26:49.351 NotebookApp] Restoring connection for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 09:26:49.352 NotebookApp] Replaying 5 buffered messages
+[I 09:26:50.504 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:28:50.506 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:30:51.012 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:38:51.010 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:46:50.523 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:58:51.429 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:00:50.530 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:02:51.041 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:06:50.551 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:07:34.668 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 10:07:34.982 NotebookApp] Kernel restarted: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 10:07:35.411 NotebookApp] Restoring connection for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 10:07:35.411 NotebookApp] Replaying 3 buffered messages
+[I 10:08:05.070 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 10:08:05.382 NotebookApp] Kernel restarted: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 10:08:05.857 NotebookApp] Restoring connection for 11d53f49-02fc-44a2-82bd-7c3475e74ded:0908a66bcb7e4739948650d875c6b49f
+[I 10:08:05.857 NotebookApp] Replaying 6 buffered messages
+[I 10:08:50.534 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:16:02.103 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:20:40.282 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:40:21.818 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 10:45:00.650 NotebookApp] New terminal with automatic name: 6
+[I 11:04:10.550 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 12:28:16.085 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:ce41c40dd07d48329f15ae3a099f01b7
+[I 12:59:17.528 NotebookApp] Restoring connection for 11d53f49-02fc-44a2-82bd-7c3475e74ded:ce41c40dd07d48329f15ae3a099f01b7
+[I 13:28:41.767 NotebookApp] Creating new file in /crawler_keyword/engine
+[I 13:29:04.886 NotebookApp] Creating new notebook in /crawler_keyword/engine
+[I 13:29:05.372 NotebookApp] Kernel started: 05b819f4-e3ac-4925-9e79-814b01a9fe92
+[I 13:31:05.567 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:32:28.135 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:28.339 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:28.500 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:28.673 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:28.852 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:29.227 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:29.329 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:29.380 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:32:29.581 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:33:05.398 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:34:32.637 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:32.854 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.010 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.184 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.383 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.550 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.750 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:33.976 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:34.199 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:34.449 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:34.645 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:34:34.869 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:35:05.551 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:36:03.141 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:03.318 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:03.887 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:04.138 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:04.597 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:04.915 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:10.277 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:10.495 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:10.693 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:36:10.917 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:37:05.389 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:43:05.396 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:45:05.380 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:47:05.396 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:49:05.412 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:53:05.408 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:55:05.413 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 13:57:05.405 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 14:00:21.350 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:01:05.418 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 14:02:21.584 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:04:21.322 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:06:21.319 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:07:54.424 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:08:21.324 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:12:21.328 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:14:21.324 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:16:21.334 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:18:21.915 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:30:21.367 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:32:21.345 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:34:21.344 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:36:21.371 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:42:21.347 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:06:21.382 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:08:21.371 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:07.101 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:07.308 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:07.473 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:07.652 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:07.852 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:08.071 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:08.296 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:11.436 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:11.646 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:11.846 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:12.003 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:12.220 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:12.472 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:09:12.646 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:10:21.363 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:21.374 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:26.222 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:26.370 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:26.569 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:26.734 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:16:37.649 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:18:21.367 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:28:21.375 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:30:21.379 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:32:21.381 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:34:21.379 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:36:21.409 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:38:21.917 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:40:21.392 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:42:21.387 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:44:21.397 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 15:54:21.430 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 16:25:25.474 NotebookApp] New terminal with automatic name: 7
+[I 16:29:12.555 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:29:12.738 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:29:12.922 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:29:13.124 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:30:22.551 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:30:22.801 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:30:22.995 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:30:23.171 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 16:45:49.748 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:45:49.904 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:45:58.096 NotebookApp] Creating new notebook in /crawler_keyword/engine
+[I 16:45:58.566 NotebookApp] Kernel started: 95734242-dbce-4cc5-b4a9-77dee3250c20
+[I 16:47:58.709 NotebookApp] Saving file at /crawler_keyword/engine/Untitled2.ipynb
+[I 17:43:08.437 NotebookApp] Starting buffering for 05b819f4-e3ac-4925-9e79-814b01a9fe92:2cb72f80c4bf43a38bc48320f4c39062
+[I 17:43:08.438 NotebookApp] Starting buffering for 95734242-dbce-4cc5-b4a9-77dee3250c20:977cbee71eb24c09813f4b7c7d04ea40
+[I 17:43:08.439 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:ce41c40dd07d48329f15ae3a099f01b7
+[I 08:52:16.375 NotebookApp] 302 GET / (192.168.41.45) 0.76ms
+[I 09:00:06.742 NotebookApp] New terminal with automatic name: 8
+[I 09:18:01.514 NotebookApp] New terminal with automatic name: 9
+[I 13:27:17.534 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:58:03.838 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:58:03.996 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:58:04.150 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:08:49.241 NotebookApp] New terminal with automatic name: 10
+[I 14:11:24.778 NotebookApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 14:11:31.906 NotebookApp] New terminal with automatic name: 11
+[I 14:13:40.276 NotebookApp] Starting buffering for 95734242-dbce-4cc5-b4a9-77dee3250c20:824af6ab0a6c4cb39998f49c6bd8e99e
+[I 14:13:40.791 NotebookApp] Kernel restarted: 95734242-dbce-4cc5-b4a9-77dee3250c20
+[I 14:13:41.441 NotebookApp] Restoring connection for 95734242-dbce-4cc5-b4a9-77dee3250c20:824af6ab0a6c4cb39998f49c6bd8e99e
+[I 14:13:41.441 NotebookApp] Replaying 4 buffered messages
+[I 14:14:14.138 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:14:14.347 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:14:14.520 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:14:19.240 NotebookApp] Saving file at /crawler_keyword/engine/Untitled2.ipynb
+[I 14:14:55.600 NotebookApp] Starting buffering for 05b819f4-e3ac-4925-9e79-814b01a9fe92:c60b28b1c1ec4a249d5e49d64660b5bc
+[I 14:14:56.111 NotebookApp] Kernel restarted: 05b819f4-e3ac-4925-9e79-814b01a9fe92
+[I 14:14:56.608 NotebookApp] Restoring connection for 05b819f4-e3ac-4925-9e79-814b01a9fe92:c60b28b1c1ec4a249d5e49d64660b5bc
+[I 14:14:56.608 NotebookApp] Replaying 6 buffered messages
+[I 14:16:12.305 NotebookApp] Saving file at /crawler_keyword/engine/Untitled1.ipynb
+[I 14:16:19.453 NotebookApp] Saving file at /crawler_keyword/engine/Untitled2.ipynb
+[I 14:17:03.971 NotebookApp] Starting buffering for 11d53f49-02fc-44a2-82bd-7c3475e74ded:690a7ef859f04175aac1fe6f47b51e3c
+[I 14:17:04.588 NotebookApp] Kernel restarted: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 14:17:05.197 NotebookApp] Restoring connection for 11d53f49-02fc-44a2-82bd-7c3475e74ded:690a7ef859f04175aac1fe6f47b51e3c
+[I 14:17:05.197 NotebookApp] Replaying 3 buffered messages
+[I 14:18:09.482 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:20:09.475 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:22:10.463 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 14:25:10.815 NotebookApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 14:25:11.032 NotebookApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[C 17:04:04.950 NotebookApp] received signal 15, stopping
+[I 17:04:04.951 NotebookApp] Shutting down 3 kernels
+[I 17:04:05.253 NotebookApp] Kernel shutdown: 11d53f49-02fc-44a2-82bd-7c3475e74ded
+[I 17:04:05.254 NotebookApp] Kernel shutdown: 05b819f4-e3ac-4925-9e79-814b01a9fe92
+[I 17:04:05.254 NotebookApp] Kernel shutdown: 95734242-dbce-4cc5-b4a9-77dee3250c20
+[I 17:09:28.298 NotebookApp] Serving notebooks from local directory: /home/hatt2/news_crawl
+[I 17:09:28.299 NotebookApp] The Jupyter Notebook is running at:
+[I 17:09:28.299 NotebookApp] http://anphat02-X299X-AORUS-MASTER:8888/?token=a0a372a4f5ff734913fe906a843d4702154d0dbee3fac153
+[I 17:09:28.299 NotebookApp]  or http://127.0.0.1:8888/?token=a0a372a4f5ff734913fe906a843d4702154d0dbee3fac153
+[I 17:09:28.299 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 17:09:28.303 NotebookApp] No web browser found: could not locate runnable browser.
+[C 17:09:28.303 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/hatt2/.local/share/jupyter/runtime/nbserver-16534-open.html
+    Or copy and paste one of these URLs:
+        http://anphat02-X299X-AORUS-MASTER:8888/?token=a0a372a4f5ff734913fe906a843d4702154d0dbee3fac153
+     or http://127.0.0.1:8888/?token=a0a372a4f5ff734913fe906a843d4702154d0dbee3fac153
+[C 17:42:28.238 NotebookApp] received signal 15, stopping
+[I 17:42:28.239 NotebookApp] Shutting down 0 kernels
+[I 08:48:50.810 NotebookApp] Serving notebooks from local directory: /home/hatt2/news_crawl
+[I 08:48:50.810 NotebookApp] The Jupyter Notebook is running at:
+[I 08:48:50.810 NotebookApp] http://anphat02-X299X-AORUS-MASTER:8888/?token=85825dcd086230081d2ddc915732ab654d632d6b582de9f3
+[I 08:48:50.810 NotebookApp]  or http://127.0.0.1:8888/?token=85825dcd086230081d2ddc915732ab654d632d6b582de9f3
+[I 08:48:50.810 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:48:50.814 NotebookApp] No web browser found: could not locate runnable browser.
+[C 08:48:50.814 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/hatt2/.local/share/jupyter/runtime/nbserver-30963-open.html
+    Or copy and paste one of these URLs:
+        http://anphat02-X299X-AORUS-MASTER:8888/?token=85825dcd086230081d2ddc915732ab654d632d6b582de9f3
+     or http://127.0.0.1:8888/?token=85825dcd086230081d2ddc915732ab654d632d6b582de9f3
+[I 08:49:01.701 NotebookApp] 302 GET / (192.168.41.45) 1.11ms
+[I 08:49:12.152 NotebookApp] Kernel started: a1956d32-bf77-442f-bfd5-1b9077003354
+[I 08:51:32.664 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 08:53:12.661 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 08:56:26.220 NotebookApp] New terminal with automatic name: 1
+[I 08:57:12.666 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 08:57:42.900 NotebookApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 08:58:00.400 NotebookApp] Starting buffering for a1956d32-bf77-442f-bfd5-1b9077003354:6cfda5f8014542398716569ec47d752f
+[I 08:58:00.712 NotebookApp] Kernel restarted: a1956d32-bf77-442f-bfd5-1b9077003354
+[I 08:58:01.159 NotebookApp] Restoring connection for a1956d32-bf77-442f-bfd5-1b9077003354:6cfda5f8014542398716569ec47d752f
+[I 08:58:01.159 NotebookApp] Replaying 6 buffered messages
+[I 08:59:06.044 NotebookApp] Kernel started: 4912a9b5-a105-48ea-8882-f9d65d9e4f59
+[I 08:59:12.663 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:01:12.156 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:03:12.163 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:05:12.671 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:07:12.160 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:13:12.165 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:15:12.166 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:17:12.662 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:29:12.179 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 09:31:12.680 NotebookApp] Saving file at /crawler_keyword/engine/Untitled.ipynb
+[I 12:10:24.735 NotebookApp] Starting buffering for 4912a9b5-a105-48ea-8882-f9d65d9e4f59:0c901b74dac44b9582d910b2f2044950
+[I 12:10:24.735 NotebookApp] Starting buffering for a1956d32-bf77-442f-bfd5-1b9077003354:6cfda5f8014542398716569ec47d752f
+[I 13:02:03.309 NotebookApp] Restoring connection for a1956d32-bf77-442f-bfd5-1b9077003354:6cfda5f8014542398716569ec47d752f
+[I 13:02:03.331 NotebookApp] Restoring connection for 4912a9b5-a105-48ea-8882-f9d65d9e4f59:0c901b74dac44b9582d910b2f2044950
+[I 15:34:00.161 NotebookApp] New terminal with automatic name: 2
+[I 17:31:35.355 NotebookApp] Starting buffering for 4912a9b5-a105-48ea-8882-f9d65d9e4f59:0c901b74dac44b9582d910b2f2044950
+[I 17:31:35.356 NotebookApp] Starting buffering for a1956d32-bf77-442f-bfd5-1b9077003354:6cfda5f8014542398716569ec47d752f
+[I 09:15:34.359 NotebookApp] 302 GET / (192.168.41.45) 0.77ms
+[I 10:11:26.203 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 10:12:43.015 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 10:52:55.344 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:52:55.538 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:52:55.729 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:52:55.906 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:52:56.098 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 10:52:56.319 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:34:05.215 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:34:24.755 NotebookApp] New terminal with automatic name: 3
+[I 11:39:11.677 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:39:11.848 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:38.611 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:38.830 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.006 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.187 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.381 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.581 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.789 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:39.998 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:40.205 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:40.424 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 11:42:40.600 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:29:48.900 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:49.091 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:49.291 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:49.466 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:49.664 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:49.844 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:50.069 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:50.306 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:50.510 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:29:50.747 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:49:23.086 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:23.286 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:23.467 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:23.639 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:23.816 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:23.992 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:24.191 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:24.386 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:24.577 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:24.801 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:46.222 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:46.436 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:46.637 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:46.806 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:46.993 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:47.168 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:47.360 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:47.566 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:47.794 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:48.017 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:48.210 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:48.405 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:48.596 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:49:48.806 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:50:38.797 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.003 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.219 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.392 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.589 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.776 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:50:39.950 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:51:16.266 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:51:16.459 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:51:16.613 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:51:16.796 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:24.954 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:53:25.157 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:53:25.340 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:53:25.519 NotebookApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:53:27.215 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:27.416 NotebookApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:54:20.468 NotebookApp] New terminal with automatic name: 4
+[I 15:08:36.529 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:08:36.705 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:08:36.883 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:08:37.060 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:08:37.266 NotebookApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 09:40:10.132 NotebookApp] 302 GET / (192.168.41.45) 0.66ms
+[I 09:41:09.466 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:09.705 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:09.926 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:10.140 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:10.318 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:10.540 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 09:41:10.721 NotebookApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 13:10:31.755 NotebookApp] 302 GET / (192.168.41.45) 0.95ms
+[I 13:11:12.303 NotebookApp] New terminal with automatic name: 5
+[I 13:16:50.525 NotebookApp] 302 GET / (192.168.41.45) 0.72ms
+[I 14:41:33.633 NotebookApp] 302 GET / (192.168.41.45) 0.71ms
+[I 08:54:13.598 NotebookApp] 302 GET / (192.168.41.45) 0.67ms
+[I 09:23:55.934 NotebookApp] 302 GET / (192.168.41.45) 0.96ms
+[W 09:24:20.053 LabApp] JupyterLab server extension not enabled, manually loading...
+[I 09:24:20.521 LabApp] JupyterLab extension loaded from /home/hatt2/.local/lib/python3.6/site-packages/jupyterlab
+[I 09:24:20.521 LabApp] JupyterLab application directory is /home/hatt2/.local/share/jupyter/lab
+[I 09:24:20.529 LabApp] Serving notebooks from local directory: /home/hatt2/news_crawl
+[I 09:24:20.529 LabApp] The Jupyter Notebook is running at:
+[I 09:24:20.529 LabApp] http://anphat02-X299X-AORUS-MASTER:8888/?token=ce3303c4d43a1bd1cd9f3eabc354ff094e68e06fa4e0fb8d
+[I 09:24:20.529 LabApp]  or http://127.0.0.1:8888/?token=ce3303c4d43a1bd1cd9f3eabc354ff094e68e06fa4e0fb8d
+[I 09:24:20.529 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 09:24:20.535 LabApp] No web browser found: could not locate runnable browser.
+[C 09:24:20.535 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/hatt2/.local/share/jupyter/runtime/nbserver-120076-open.html
+    Or copy and paste one of these URLs:
+        http://anphat02-X299X-AORUS-MASTER:8888/?token=ce3303c4d43a1bd1cd9f3eabc354ff094e68e06fa4e0fb8d
+     or http://127.0.0.1:8888/?token=ce3303c4d43a1bd1cd9f3eabc354ff094e68e06fa4e0fb8d
+[W 09:24:37.572 LabApp] Could not determine jupyterlab build status without nodejs
+[W 09:24:37.580 LabApp] 404 GET /api/contents/engine/Dockerfile?content=0&1594693475406 (192.168.41.45): No such file or directory: engine/Dockerfile
+[W 09:24:37.580 LabApp] No such file or directory: engine/Dockerfile
+[W 09:24:37.581 LabApp] 404 GET /api/contents/engine/Dockerfile?content=0&1594693475406 (192.168.41.45) 5.56ms referer=http://192.168.41.19:8888/lab
+[W 09:24:37.581 LabApp] 404 GET /api/contents/Dockerfile?content=0&1594693475408 (192.168.41.45): No such file or directory: Dockerfile
+[W 09:24:37.581 LabApp] No such file or directory: Dockerfile
+[W 09:24:37.582 LabApp] 404 GET /api/contents/Dockerfile?content=0&1594693475408 (192.168.41.45) 5.61ms referer=http://192.168.41.19:8888/lab
+[I 09:24:37.607 LabApp] Kernel started: ca63de47-3c15-4598-a3af-c6dc81384375
+TermSocket.open: 1
+[I 09:24:37.656 LabApp] New terminal with specified name: 1
+TermSocket.open: Opened 1
+[W 09:24:38.238 LabApp] 404 GET /api/contents/src?1594693476527 (192.168.41.45): No such file or directory: src
+[W 09:24:38.238 LabApp] No such file or directory: src
+[W 09:24:38.238 LabApp] 404 GET /api/contents/src?1594693476527 (192.168.41.45) 1.50ms referer=http://192.168.41.19:8888/lab
+[I 09:32:58.490 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:34:59.489 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 10:01:03.529 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 10:03:50.531 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 10:05:51.503 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 10:07:52.501 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:16:17.634 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:20:18.586 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:22:18.932 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:24:18.978 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:26:19.553 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:39:55.910 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:39:56.095 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:39:56.285 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:40:47.764 LabApp] Creating new file in /crawler_keyword/engine/utils
+[I 12:11:22.615 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:8c897d0a-3b8d-4540-b858-940e8f5964c9
+Websocket closed
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[I 13:02:38.684 LabApp] Restoring connection for ca63de47-3c15-4598-a3af-c6dc81384375:8c897d0a-3b8d-4540-b858-940e8f5964c9
+Websocket closed
+[I 13:09:46.340 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:8c897d0a-3b8d-4540-b858-940e8f5964c9
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[W 13:09:47.335 LabApp] Could not determine jupyterlab build status without nodejs
+[I 13:11:47.929 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:22:55.623 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:30:55.771 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:c811acab-93a9-4357-a9b5-d5b8875281f1
+Websocket closed
+[I 09:17:59.565 LabApp] 302 GET / (192.168.41.45) 1.39ms
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[W 09:18:00.935 LabApp] Could not determine jupyterlab build status without nodejs
+[I 09:36:05.091 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:38:06.063 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:44:08.102 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:46:08.167 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:48:08.205 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:50:09.067 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:52:10.074 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:56:10.123 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 09:58:10.174 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:00:10.350 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:02:11.094 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:04:12.079 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:06:13.069 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:08:14.109 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:10:14.152 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:12:14.185 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:14:14.223 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:16:14.254 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:18:14.289 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:20:14.340 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:22:15.085 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:24:16.084 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:34:19.104 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:36:19.130 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:38:19.153 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:40:20.091 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:42:21.100 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:44:21.149 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:46:21.196 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:48:21.236 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:50:22.096 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:54:23.132 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:56:23.158 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:58:23.201 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:20.870 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:21.038 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:45.350 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:45.515 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:45.726 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:45.919 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:46.095 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:46.284 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:46.489 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:46.685 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:46.848 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:47.065 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:00:47.258 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:06:20.275 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 11:28:20.978 LabApp] Saving file at /crawler_keyword/engine/utils/data.py
+[I 11:30:22.580 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:32:23.118 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:34:23.143 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:36:23.204 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:38:23.245 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:18.631 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:18.826 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:18.987 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:19.175 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:19.378 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:19.555 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 11:40:19.730 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 12:07:59.306 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:e4e93993-e9d3-4e68-9718-0e43a8da9148
+Websocket closed
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[I 12:54:00.735 LabApp] Restoring connection for ca63de47-3c15-4598-a3af-c6dc81384375:e4e93993-e9d3-4e68-9718-0e43a8da9148
+[I 13:09:57.831 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 13:13:27.610 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:27.689 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:27.843 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:28.031 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:28.238 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:28.433 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:28.638 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:28.824 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:29.022 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:29.204 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:14:29.403 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 13:27:26.084 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:27:26.233 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:27:26.408 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:31:55.747 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:39:55.791 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:41:55.818 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:41:58.348 LabApp] Creating new directory in /crawler_keyword/engine
+[I 13:42:27.856 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:42:28.030 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:43:15.024 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:43:15.234 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:03.163 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:03.396 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:03.575 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:03.795 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:48.237 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:48.456 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:48.645 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:48.694 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:45:48.859 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+Websocket closed
+[I 13:47:42.003 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:e4e93993-e9d3-4e68-9718-0e43a8da9148
+TermSocket.open: 1
+TermSocket.open: Opened 1
+[W 13:47:45.464 LabApp] Could not determine jupyterlab build status without nodejs
+[I 13:52:40.878 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.066 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.229 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.409 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.593 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.771 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:41.948 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:42.145 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:42.353 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:42.592 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:43.050 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:43.297 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:43.491 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:43.706 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:52:43.908 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:16.221 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:16.417 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:16.595 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:16.768 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:16.950 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:17.130 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 13:53:17.349 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:17.777 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:26.248 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:26.464 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:26.649 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:26.846 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:27.044 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:27.220 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:27.421 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:42.332 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:58.560 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:58.764 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:58.979 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:59.179 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:59.379 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:59.575 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:59.757 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:15:59.964 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:16:00.130 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:22.461 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:22.638 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:22.853 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.011 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.208 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.384 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.583 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.780 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:23.984 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:18:29.230 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:20:39.705 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:20:39.893 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:20:40.088 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:20:40.241 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:20:40.388 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:21:16.905 LabApp] New terminal with automatic name: 2
+TermSocket.open: 2
+TermSocket.open: Opened 2
+[I 14:55:12.060 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:12.261 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:12.459 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:12.658 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:12.880 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:13.082 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:13.285 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:13.476 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:13.668 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:15.849 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:16.050 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:16.251 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:16.445 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:16.648 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:17.264 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:17.269 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:17.428 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 14:55:17.580 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:01:39.103 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:01:48.724 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:01:48.944 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:01:49.118 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:01:49.298 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:01:49.475 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:05:02.456 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:05:02.657 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:05:02.854 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 15:32:41.193 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:41.406 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:41.607 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:41.801 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:41.978 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:42.199 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:42.445 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:51.571 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:51.763 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:51.961 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 15:32:52.232 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 16:00:57.856 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 16:02:58.851 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 16:19:15.887 LabApp] New terminal with automatic name: 3
+TermSocket.open: 3
+TermSocket.open: Opened 3
+Websocket closed
+Websocket closed
+[I 16:28:08.584 LabApp] Starting buffering for ca63de47-3c15-4598-a3af-c6dc81384375:843ec5a4-3af8-411e-9be3-7d814686e491
+Websocket closed
+[I 16:28:16.271 LabApp] 302 GET / (192.168.41.45) 0.83ms
+[W 16:28:18.346 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594805297947 (192.168.41.45): No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 16:28:18.347 LabApp] No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 16:28:18.347 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594805297947 (192.168.41.45) 2.74ms referer=http://192.168.41.19:8888/lab?
+[W 16:28:18.349 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594805297948 (192.168.41.45): No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 16:28:18.349 LabApp] No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 16:28:18.350 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594805297948 (192.168.41.45) 1.90ms referer=http://192.168.41.19:8888/lab?
+[W 16:28:18.506 LabApp] Could not determine jupyterlab build status without nodejs
+[W 16:28:18.900 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vcbs/bao-cao-thi-truong?1594805298502 (192.168.41.45): No such file or directory: Financial_Report_sentiment /Data/vcbs/bao-cao-thi-truong
+[W 16:28:18.900 LabApp] No such file or directory: Financial_Report_sentiment /Data/vcbs/bao-cao-thi-truong
+[W 16:28:18.901 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vcbs/bao-cao-thi-truong?1594805298502 (192.168.41.45) 2.13ms referer=http://192.168.41.19:8888/lab?
+[W 16:36:38.013 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594805797608 (192.168.41.45): No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 16:36:38.014 LabApp] No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 16:36:38.014 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594805797608 (192.168.41.45) 2.94ms referer=http://192.168.41.19:8888/lab?
+[W 16:36:38.014 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594805797609 (192.168.41.45): No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 16:36:38.015 LabApp] No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 16:36:38.015 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594805797609 (192.168.41.45) 2.97ms referer=http://192.168.41.19:8888/lab?
+[W 16:36:38.112 LabApp] Could not determine jupyterlab build status without nodejs
+[W 16:36:38.562 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vcbs?1594805798160 (192.168.41.45): No such file or directory: Financial_Report_sentiment /Data/vcbs
+[W 16:36:38.562 LabApp] No such file or directory: Financial_Report_sentiment /Data/vcbs
+[W 16:36:38.562 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vcbs?1594805798160 (192.168.41.45) 1.86ms referer=http://192.168.41.19:8888/lab?
+[I 09:02:30.479 LabApp] 302 GET / (192.168.41.45) 0.83ms
+[W 09:02:31.729 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594864951511 (192.168.41.45): No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 09:02:31.729 LabApp] No such file or directory: Financial_Report_sentiment /extract_all_stock_reports.ipynb
+[W 09:02:31.729 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/extract_all_stock_reports.ipynb?content=0&1594864951511 (192.168.41.45) 0.90ms referer=http://192.168.41.19:8888/lab?
+[W 09:02:31.730 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594864951512 (192.168.41.45): No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 09:02:31.730 LabApp] No such file or directory: Financial_Report_sentiment /brainstorm_extract_report_pdf.ipynb
+[W 09:02:31.730 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/brainstorm_extract_report_pdf.ipynb?content=0&1594864951512 (192.168.41.45) 0.63ms referer=http://192.168.41.19:8888/lab?
+[W 09:02:31.731 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/process_data_scripts.ipynb?content=0&1594864951512 (192.168.41.45): No such file or directory: Financial_Report_sentiment /process_data_scripts.ipynb
+[W 09:02:31.731 LabApp] No such file or directory: Financial_Report_sentiment /process_data_scripts.ipynb
+[W 09:02:31.731 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/process_data_scripts.ipynb?content=0&1594864951512 (192.168.41.45) 0.51ms referer=http://192.168.41.19:8888/lab?
+[W 09:02:31.854 LabApp] Could not determine jupyterlab build status without nodejs
+[W 09:02:32.276 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vndirect?1594864952057 (192.168.41.45): No such file or directory: Financial_Report_sentiment /Data/vndirect
+[W 09:02:32.277 LabApp] No such file or directory: Financial_Report_sentiment /Data/vndirect
+[W 09:02:32.277 LabApp] 404 GET /api/contents/Financial_Report_sentiment%20/Data/vndirect?1594864952057 (192.168.41.45) 1.99ms referer=http://192.168.41.19:8888/lab?
+[I 09:03:15.079 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:19.306 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:19.503 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:19.700 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:19.883 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:20.076 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:20.274 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:20.510 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:20.715 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:20.909 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:21.133 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:03:40.814 LabApp] New terminal with automatic name: 4
+TermSocket.open: 4
+TermSocket.open: Opened 4
+[I 09:04:05.712 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:04:05.946 LabApp] Saving file at /crawler_keyword/engine/utils/redisquene.py
+[I 09:06:38.765 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:06:57.365 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:06:57.549 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:06:57.732 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:06:57.899 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:06:58.079 LabApp] Saving file at /crawler_keyword/engine/jobqueue.py
+[I 09:49:02.237 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:02.559 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:02.778 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:03.064 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:03.218 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:03.444 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:03.677 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:03.863 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:04.084 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 09:49:04.307 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:05:05.833 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:07:05.870 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:09:05.900 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:02.650 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:02.840 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:03.046 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:03.249 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:39.242 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:39.431 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:39.654 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 10:13:39.830 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+Websocket closed
+TermSocket.open: 4
+TermSocket.open: Opened 4
+[I 13:54:07.477 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:56:07.501 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:56:14.399 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:56:14.586 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:56:14.787 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 13:58:14.911 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:04:14.945 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:04:16.119 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:04:16.315 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:04:16.518 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:04:16.703 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:05:07.677 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:05:07.867 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 14:07:45.318 LabApp] 302 GET / (192.168.41.165) 0.86ms
+[I 14:07:45.323 LabApp] 302 GET /lab? (192.168.41.165) 1.13ms
+[I 14:08:32.548 LabApp] New terminal with automatic name: 5
+TermSocket.open: 5
+TermSocket.open: Opened 5
+[I 14:09:26.037 LabApp] 302 POST /login?next=%2Flab%3F (192.168.41.165) 2.14ms
+[W 14:09:27.224 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 4
+TermSocket.open: Opened 4
+TermSocket.open: 5
+TermSocket.open: Opened 5
+[I 14:36:22.670 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:36:22.776 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:36:22.975 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:36:23.205 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:38:23.515 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:42:24.515 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:42:26.654 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:42:28.291 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:42:28.802 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:43:27.429 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:43:27.646 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 14:58:46.941 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 14:59:03.019 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:00:11.420 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:00:11.693 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:02:47.587 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:36.664 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:36.863 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.041 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.216 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.392 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.573 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.799 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:37.970 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:38.166 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:07:38.345 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:29.885 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.075 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.250 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.426 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.614 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.779 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:30.975 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:31.156 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:31.348 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:31.525 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:31.723 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:31.921 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:32.100 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:32.279 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:32.434 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:32.633 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:32.811 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.010 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.211 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.409 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.609 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.790 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:33.964 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:34.166 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:34.365 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:34.583 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:34.828 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:35.092 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:40.467 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:40.617 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:40.652 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:40.824 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:21:41.011 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:31:43.544 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:31:57.942 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:12.890 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:13.100 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:13.264 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:13.444 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:13.645 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:13.848 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:14.020 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:32:14.225 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:02.732 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:02.954 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:03.119 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:03.342 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:03.537 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:03.711 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:03.916 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:04.116 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:04.289 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:04.487 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:04.688 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:04.907 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:05.081 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:05.286 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:05.457 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:05.680 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:05.848 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.046 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.227 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.424 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.604 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.803 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:06.999 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:33:07.193 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:21.820 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:21.993 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:22.178 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:22.353 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:22.529 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:35:22.729 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 15:37:11.344 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:11.576 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:11.768 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:11.954 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:12.124 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:12.341 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:12.563 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:12.762 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:12.964 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:13.137 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:13.349 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:13.555 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:13.806 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:13.960 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:14.181 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:14.470 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:15.968 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:16.169 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:37:16.218 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:12.703 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:12.899 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:13.115 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:13.304 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:13.484 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:13.655 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:13.921 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:14.187 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:14.454 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 15:38:22.555 LabApp] New terminal with automatic name: 6
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[I 15:42:13.354 LabApp] Saving file at /crawler_keyword/engine/utils/mysqlutils.py
+[I 16:18:25.581 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:11.387 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:34.693 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.068 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.201 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.248 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.420 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.595 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.750 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:35.927 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:57.519 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:57.710 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:57.890 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.065 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.243 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.428 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.591 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.797 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:58.990 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:59.192 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:59.388 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:59.576 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:20:59.789 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:00.013 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:00.209 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:00.403 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:00.583 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:00.785 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:01.009 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:01.229 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:01.453 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:01.633 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:02.154 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:03.035 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:03.241 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:03.445 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:03.631 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:03.859 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:04.054 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:04.248 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:04.468 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:04.664 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:04.865 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:05.083 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:05.276 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:05.454 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:21:05.653 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:11.149 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:11.290 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:39.238 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:22:39.481 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:29:04.611 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:29:04.757 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:29:04.958 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:23.157 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:23.369 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:23.520 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:23.698 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:23.872 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:38:24.076 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:07.232 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:07.389 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:07.567 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:07.752 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:07.921 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:08.096 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:47:08.267 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 16:51:12.819 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:13.016 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:26.476 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:26.679 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:26.956 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:27.102 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:27.242 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:51:27.585 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:27.615 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:44.826 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.014 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.213 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.389 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.577 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.760 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 16:55:45.956 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:03:33.607 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:36.697 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:36.857 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:37.061 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:46.211 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:46.410 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:46.587 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:03:46.764 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:05:47.602 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 17:15:01.806 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:15:01.996 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:17:02.612 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:02.767 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:06.523 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:06.730 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:06.920 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:07.133 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:07.346 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:07.551 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:55.656 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:55.856 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:56.036 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:56.206 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:56.404 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:56.604 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:56.801 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:57.013 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:57.234 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:57.477 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:57.700 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:57.915 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:58.142 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:58.387 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:58.669 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:59.008 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:59.272 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:59.535 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:59.749 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:19:59.975 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:00.174 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:00.388 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:18.072 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:18.287 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:18.481 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:18.685 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:18.890 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:19.097 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:19.166 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:20:19.323 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 17:27:03.515 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:03.721 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:03.919 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:04.119 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:04.339 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:04.563 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:04.782 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:04.982 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:05.179 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:05.420 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:05.705 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:05.992 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:06.183 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:06.384 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:06.564 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:21.162 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:21.382 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:21.579 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:21.780 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:21.981 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:22.245 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:22.524 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:22.746 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:22.987 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:23.213 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:23.678 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:23.780 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:23.900 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:24.099 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:24.322 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:24.516 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:24.872 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.001 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.062 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.261 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.481 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.676 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:25.920 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:26.147 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:26.360 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:27:26.567 LabApp] Saving file at /crawler_keyword/engine/utils/controllers.py
+[I 17:29:03.659 LabApp] Kernel started: 065503a0-87bb-48df-846b-4f08491710d4
+[I 17:29:51.178 LabApp] Kernel started: e63a3285-418a-4a13-b932-36dc972ea621
+Websocket closed
+Websocket closed
+Websocket closed
+[I 17:32:24.875 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:53a38637-21c7-43a3-8dd8-bc6f5a4e9775
+[I 17:32:24.876 LabApp] Starting buffering for 065503a0-87bb-48df-846b-4f08491710d4:66ff8280-7f5a-45b3-a387-3fb6043d7edd
+[I 08:59:17.912 LabApp] 302 GET / (192.168.41.45) 0.87ms
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[W 08:59:19.279 LabApp] Could not determine jupyterlab build status without nodejs
+Websocket closed
+[W 09:19:48.364 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[I 09:24:40.531 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:24:40.762 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:24:41.002 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:27:59.730 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:27:59.929 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:28:00.079 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+Websocket closed
+[I 09:28:36.683 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:72d17d1c-9120-4bdc-bbab-e8582bd48bd9
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[W 09:28:39.172 LabApp] Could not determine jupyterlab build status without nodejs
+[W 09:29:47.118 LabApp] delete /crawler_keyword/engine/Untitled1.ipynb
+[W 09:29:47.134 LabApp] delete /crawler_keyword/engine/Untitled2.ipynb
+[W 09:29:47.420 LabApp] delete /crawler_keyword/engine/Untitled.ipynb
+[I 09:32:47.950 LabApp] New terminal with automatic name: 7
+TermSocket.open: 7
+TermSocket.open: Opened 7
+[I 09:34:38.264 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:34:38.482 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:36:15.726 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:36:15.948 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:36:16.128 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:38:56.808 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:38:56.972 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:38:57.149 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:22.544 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:22.722 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:22.895 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:23.075 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:23.247 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:23.453 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:48.578 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:48.769 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:48.944 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:49.122 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:49.338 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:49.518 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:39:49.692 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:44.456 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:44.675 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:44.875 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:45.068 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:45.244 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:45.421 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:45.662 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 09:43:45.881 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[W 09:44:27.268 LabApp] WebSocket ping timeout after 90000 ms.
+Websocket closed
+[W 09:44:57.254 LabApp] WebSocket ping timeout after 119999 ms.
+Websocket closed
+TermSocket.open: 4
+TermSocket.open: Opened 4
+TermSocket.open: 5
+TermSocket.open: Opened 5
+[I 09:48:07.359 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:48:07.576 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:48:07.752 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:48:07.927 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:48:08.081 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 09:50:28.701 LabApp] Creating new directory in /
+[I 09:54:02.538 LabApp] Creating new directory in /utils
+[W 09:54:09.266 LabApp] delete /utils/Untitled Folder
+[I 09:54:31.288 LabApp] Creating new file in /utils
+[I 09:56:30.663 LabApp] Saving file at /utils/init.py
+[I 09:56:30.875 LabApp] Saving file at /utils/init.py
+[I 10:00:31.275 LabApp] Saving file at /utils/__init__.py
+[I 10:12:33.284 LabApp] Saving file at /utils/__init__.py
+[I 10:14:01.527 LabApp] Saving file at /utils/__init__.py
+[I 10:14:01.708 LabApp] Saving file at /utils/__init__.py
+[I 10:14:01.883 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.058 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.242 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.438 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.609 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.787 LabApp] Saving file at /utils/__init__.py
+[I 10:14:02.961 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.136 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.306 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.486 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.638 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.836 LabApp] Saving file at /utils/__init__.py
+[I 10:14:03.988 LabApp] Saving file at /utils/__init__.py
+[I 10:14:18.144 LabApp] Kernel started: 889994b5-67aa-4b8e-9dfd-f718cc3f57c2
+[I 10:16:04.018 LabApp] Saving file at /utils/__init__.py
+[I 10:16:46.427 LabApp] Saving file at /utils/__init__.py
+[I 10:16:46.600 LabApp] Saving file at /utils/__init__.py
+[I 10:16:48.879 LabApp] Saving file at /utils/__init__.py
+[I 10:16:49.059 LabApp] Saving file at /utils/__init__.py
+[I 10:16:49.272 LabApp] Saving file at /utils/__init__.py
+[I 10:16:49.398 LabApp] Saving file at /utils/__init__.py
+[I 10:16:49.587 LabApp] Saving file at /utils/__init__.py
+[I 10:16:49.783 LabApp] Saving file at /utils/__init__.py
+[I 10:16:55.532 LabApp] Kernel started: e2466f30-a550-4219-8dfb-b68f8d79aeab
+[I 10:17:21.593 LabApp] Creating new notebook in /
+[I 10:17:21.767 LabApp] Kernel started: f5af35b5-9eda-4ca8-9057-c754cc2da0ff
+[I 10:19:21.752 LabApp] Saving file at /Untitled.ipynb
+[I 10:19:33.831 LabApp] Creating new notebook in /crawler_keyword
+[I 10:19:33.993 LabApp] Kernel started: ac94e302-d8ec-40d3-b823-80ecab07e3dd
+[I 10:21:34.273 LabApp] Saving file at /crawler_keyword/Untitled1.ipynb
+[I 10:23:35.293 LabApp] Saving file at /crawler_keyword/Untitled1.ipynb
+[I 10:28:15.291 LabApp] Saving file at /crawler_keyword/engine/fetch.sh
+[I 10:28:31.926 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:28:34.417 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:28:34.633 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:28:34.790 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:11.011 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:16.217 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:16.339 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:16.492 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:16.666 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:18.307 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:18.483 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:23.583 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:23.763 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:23.890 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:26.173 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:30.342 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:31.852 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:32.013 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:29:32.158 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:31:32.180 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:35:32.304 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:37:32.393 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:38:50.691 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:38:50.875 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:10.196 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:10.373 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:10.553 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:10.726 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:10.908 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:11.108 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:11.320 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:11.542 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:17.576 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:17.736 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:17.935 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:18.138 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:18.331 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:18.575 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:18.861 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:39:18.971 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 10:40:13.771 LabApp] Creating new file in /crawler_keyword
+[I 10:42:41.831 LabApp] Saving file at /crawler_keyword/engine/Dockerfile
+[I 10:46:26.503 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 10:46:42.176 LabApp] Saving file at /crawler_keyword/Dockerfile
+[W 10:46:54.314 LabApp] delete /crawler_keyword/Untitled.ipynb
+[I 10:46:59.051 LabApp] Kernel shutdown: ac94e302-d8ec-40d3-b823-80ecab07e3dd
+/home/hatt2/.local/lib/python3.6/site-packages/jupyter_client/manager.py:358: FutureWarning: Method cleanup(connection_file=True) is deprecated, use cleanup_resources(restart=False).
+  FutureWarning)
+[W 10:46:59.403 LabApp] delete /crawler_keyword/Untitled1.ipynb
+[W 10:47:11.057 LabApp] delete /crawler_keyword/untitled.txt
+[I 10:48:42.298 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:50:42.374 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:04.803 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:05.003 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:05.178 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:05.360 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:05.556 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:05.750 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:52:47.674 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:52:48.068 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:52:48.195 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:52:48.244 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:37.934 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:38.141 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:38.335 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:38.529 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:38.728 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:38.965 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:39.185 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:53:39.420 LabApp] Saving file at /crawler_keyword/engine/job_v1.py
+[I 10:54:35.053 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:35.412 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:35.538 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:35.601 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:35.771 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:35.971 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:36.171 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:36.345 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:36.525 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:36.742 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:36.965 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:37.183 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:37.425 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:37.612 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:37.824 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:38.020 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:38.239 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:54:38.457 LabApp] Saving file at /crawler_keyword/Dockerfile
+[I 10:58:59.746 LabApp] Copying crawler_keyword/Dockerfile.crawler to /crawler_keyword
+[I 11:00:31.468 LabApp] Saving file at /crawler_keyword/Dockerfile.controller
+[I 11:00:31.659 LabApp] Saving file at /crawler_keyword/Dockerfile.controller
+[I 11:00:31.855 LabApp] Saving file at /crawler_keyword/Dockerfile.controller
+[I 11:00:32.033 LabApp] Saving file at /crawler_keyword/Dockerfile.controller
+[W 11:03:54.512 LabApp] Replacing stale connection: 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:860250b6-f575-4b86-afe5-8266fff56579
+[I 11:03:59.513 LabApp] Starting buffering for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:860250b6-f575-4b86-afe5-8266fff56579
+[I 11:03:59.515 LabApp] Restoring connection for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:860250b6-f575-4b86-afe5-8266fff56579
+[W 11:03:59.532 LabApp] Replacing stale connection: e63a3285-418a-4a13-b932-36dc972ea621:8422855d-8bc9-4818-acfb-74f81b402e84
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[W 11:04:04.571 LabApp] Replacing stale connection: e63a3285-418a-4a13-b932-36dc972ea621:af2225ed-b3fa-46ae-a5d1-493dc2470d62
+[W 11:04:09.594 LabApp] Replacing stale connection: e2466f30-a550-4219-8dfb-b68f8d79aeab:e8849ad2-0a4a-480b-b5db-a7e6353b5c1e
+[I 11:04:14.597 LabApp] Starting buffering for e2466f30-a550-4219-8dfb-b68f8d79aeab:e8849ad2-0a4a-480b-b5db-a7e6353b5c1e
+[I 11:04:14.598 LabApp] Restoring connection for e2466f30-a550-4219-8dfb-b68f8d79aeab:e8849ad2-0a4a-480b-b5db-a7e6353b5c1e
+TermSocket.open: 7
+TermSocket.open: Opened 7
+[W 11:04:14.631 LabApp] Replacing stale connection: e63a3285-418a-4a13-b932-36dc972ea621:9a4b9247-5c74-429b-8c10-32bee4a8414b
+[W 11:04:19.653 LabApp] Replacing stale connection: f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[I 11:04:24.655 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[I 11:04:24.657 LabApp] Restoring connection for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[I 11:04:29.393 LabApp] Saving file at /crawler_keyword/docker-compose.yml
+[W 11:04:47.983 LabApp] WebSocket ping timeout after 119997 ms.
+Websocket closed
+[W 11:05:09.121 LabApp] WebSocket ping timeout after 119996 ms.
+Websocket closed
+[W 11:15:24.657 LabApp] WebSocket ping timeout after 119997 ms.
+[W 11:15:29.517 LabApp] WebSocket ping timeout after 119997 ms.
+[I 11:15:29.659 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[I 11:15:34.519 LabApp] Starting buffering for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:860250b6-f575-4b86-afe5-8266fff56579
+[W 11:15:34.537 LabApp] WebSocket ping timeout after 119998 ms.
+[W 11:15:34.554 LabApp] WebSocket ping timeout after 119998 ms.
+Websocket closed
+[W 11:15:39.575 LabApp] WebSocket ping timeout after 119997 ms.
+[W 11:15:44.599 LabApp] WebSocket ping timeout after 119997 ms.
+[W 11:15:44.615 LabApp] WebSocket ping timeout after 119996 ms.
+[I 11:15:49.600 LabApp] Starting buffering for e2466f30-a550-4219-8dfb-b68f8d79aeab:e8849ad2-0a4a-480b-b5db-a7e6353b5c1e
+Websocket closed
+[W 11:15:49.634 LabApp] WebSocket ping timeout after 119920 ms.
+[I 11:15:54.636 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:9a4b9247-5c74-429b-8c10-32bee4a8414b
+[I 11:19:45.811 LabApp] Restoring connection for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[I 11:22:40.209 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:f96d008e-bcf1-48f0-9c9b-3f9771831d1c
+[W 11:22:41.202 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 6
+TermSocket.open: Opened 6
+TermSocket.open: 7
+TermSocket.open: Opened 7
+[I 11:26:04.630 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:26:04.900 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:26:05.096 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:26:05.299 LabApp] Saving file at /crawler_keyword/engine/cfg/config.py
+[I 11:30:48.296 LabApp] Saving file at /docker-compose.yaml
+[I 11:32:48.338 LabApp] Saving file at /docker-compose.yaml
+[I 11:34:49.327 LabApp] Saving file at /docker-compose.yaml
+[I 11:36:49.350 LabApp] Saving file at /docker-compose.yaml
+[I 11:38:49.381 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:03.871 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:04.077 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:04.273 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:04.446 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:04.649 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:04.859 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:05.056 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:05.281 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:05.609 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:05.845 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:06.039 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:06.219 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:06.418 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:06.738 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:06.919 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:07.062 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:07.214 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:07.385 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:07.581 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:07.760 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:14.959 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:15.136 LabApp] Saving file at /docker-compose.yaml
+[I 11:39:15.313 LabApp] Saving file at /docker-compose.yaml
+[W 11:45:41.237 LabApp] WebSocket ping timeout after 119998 ms.
+[W 11:45:41.254 LabApp] WebSocket ping timeout after 119999 ms.
+[W 11:45:41.422 LabApp] WebSocket ping timeout after 119997 ms.
+[W 11:45:41.438 LabApp] WebSocket ping timeout after 119995 ms.
+[W 11:45:41.453 LabApp] WebSocket ping timeout after 119998 ms.
+[W 11:45:41.851 LabApp] WebSocket ping timeout after 119893 ms.
+[W 11:45:41.868 LabApp] WebSocket ping timeout after 119910 ms.
+[I 11:45:46.240 LabApp] Starting buffering for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:72251e20-f5aa-4e1f-a227-d441d668fbb5
+[I 11:45:46.255 LabApp] Starting buffering for e2466f30-a550-4219-8dfb-b68f8d79aeab:67dd54be-1b40-4906-8971-239ae044a725
+Websocket closed
+Websocket closed
+[I 11:45:46.853 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:8d338c6e-63dd-4be7-9c1e-2d4ac978fc0c
+[W 11:45:50.690 LabApp] WebSocket ping timeout after 119998 ms.
+[I 11:45:55.692 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:1487c006-0fe6-44c4-b593-14f5b130586e
+[W 13:19:19.241 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[W 13:22:49.120 LabApp] WebSocket ping timeout after 119981 ms.
+[W 13:22:49.135 LabApp] WebSocket ping timeout after 119996 ms.
+[W 13:22:49.225 LabApp] WebSocket ping timeout after 119996 ms.
+[W 13:22:49.364 LabApp] WebSocket ping timeout after 119997 ms.
+[W 13:22:49.717 LabApp] WebSocket ping timeout after 119989 ms.
+[W 13:22:49.766 LabApp] WebSocket ping timeout after 119930 ms.
+[I 13:22:54.124 LabApp] Starting buffering for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:db4e6810-b245-4db5-a6b9-db0218b71db8
+[I 13:22:54.136 LabApp] Starting buffering for e2466f30-a550-4219-8dfb-b68f8d79aeab:7ccc22e2-bfe9-475a-9bb6-4147ad6c4009
+Websocket closed
+[I 13:22:54.718 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:10a6b033-c414-4660-af90-7b65dac58668
+[W 13:22:58.754 LabApp] WebSocket ping timeout after 119981 ms.
+[I 13:23:03.756 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:de7bc922-1ff5-4ab7-98b2-dc36ecd735f9
+[W 13:25:36.401 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 6
+TermSocket.open: Opened 6
+[I 13:26:03.925 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:04.148 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:04.323 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:04.494 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:04.691 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:04.886 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:05.092 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:05.284 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:05.486 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:05.659 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:05.863 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:06.062 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:06.258 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:06.682 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:06.877 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:06.958 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:26:07.136 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:43.149 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:43.353 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:43.532 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:43.706 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:43.881 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:28:44.081 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 13:32:17.816 LabApp] Saving file at /docker-compose.yaml
+[I 13:32:17.826 LabApp] Saving file at /docker-compose.yaml
+[I 13:33:08.327 LabApp] Saving file at /docker-compose.yaml
+[I 13:33:08.998 LabApp] Saving file at /docker-compose.yaml
+[I 13:33:09.001 LabApp] Saving file at /docker-compose.yaml
+[I 13:33:09.077 LabApp] Saving file at /docker-compose.yaml
+[I 13:34:46.476 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:34:46.678 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:34:46.833 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:49.622 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:49.815 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:50.007 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:50.173 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:50.351 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:50.521 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:35:50.704 LabApp] Saving file at /crawler_keyword/Dockerfile.crawler
+[I 13:39:37.371 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:40.028 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:40.230 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:40.450 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:40.645 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:49.645 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:49.839 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.032 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.238 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.414 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.611 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.796 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:50.971 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:51.151 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:40:51.319 LabApp] Saving file at /crawler_keyword/engine/utils/crawler_v3.py
+[I 13:41:58.632 LabApp] Creating new directory in /
+[I 13:43:09.167 LabApp] Saving file at /docker-compose.yaml
+[I 13:43:55.984 LabApp] Saving file at /docker-compose.yaml
+[I 13:43:56.393 LabApp] Saving file at /docker-compose.yaml
+[I 13:43:56.612 LabApp] Saving file at /docker-compose.yaml
+[I 13:43:56.806 LabApp] Saving file at /docker-compose.yaml
+[I 13:43:56.983 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:06.780 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.001 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.174 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.350 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.552 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.754 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:07.953 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:08.176 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:08.326 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:08.557 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:08.784 LabApp] Saving file at /docker-compose.yaml
+[I 13:44:09.036 LabApp] Saving file at /docker-compose.yaml
+[I 13:46:52.329 LabApp] Creating new directory in /
+[I 13:47:09.134 LabApp] Saving file at /docker-compose.yaml
+[I 13:47:09.302 LabApp] Saving file at /docker-compose.yaml
+[I 13:57:09.453 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:23.159 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:23.555 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:23.645 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:23.752 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:23.945 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:24.124 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:24.323 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:24.544 LabApp] Saving file at /docker-compose.yaml
+[I 14:02:24.767 LabApp] Saving file at /docker-compose.yaml
+[I 14:03:30.083 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:30.284 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:30.461 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:30.659 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:30.855 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:31.034 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:31.209 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:03:31.386 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:09:18.708 LabApp] Saving file at /crawler_keyword/requirements.txt
+[I 14:13:35.195 LabApp] Starting buffering for 889994b5-67aa-4b8e-9dfd-f718cc3f57c2:693a5147-02d6-4e7c-a506-86f64a26db7e
+[I 14:13:35.195 LabApp] Starting buffering for e2466f30-a550-4219-8dfb-b68f8d79aeab:26bcaa3c-ec86-4fc0-9b67-3cd3ffe2d076
+Websocket closed
+[I 14:13:35.198 LabApp] Starting buffering for e63a3285-418a-4a13-b932-36dc972ea621:30f2eaff-2fec-433e-87e8-5be0f9255920
+[I 14:13:35.199 LabApp] Starting buffering for f5af35b5-9eda-4ca8-9057-c754cc2da0ff:21b903ea-6aa9-4f74-b62d-0ab94ff735fd
+[W 14:13:37.607 LabApp] Could not determine jupyterlab build status without nodejs
+TermSocket.open: 6
+TermSocket.open: Opened 6

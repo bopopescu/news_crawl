@@ -1,0 +1,53 @@
+version: "3.1"
+
+services:
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=sentiment
+    restart: always
+    healthcheck:
+      test: mysqladmin -uroot -p123456 ping
+      interval: 2s
+      timeout: 5s
+      retries: 30
+    volumes:
+      - ./db:/var/lib/mysql
+  standalone-chrome:
+    image: selenium/standalone-chrome
+  redis:
+    image: redis:alpine
+  crawler:
+    build: 
+        context: ./crawler_keyword
+        dockerfile: Dockerfile.crawler
+    image: crawler
+    restart: always
+    environment:
+      - MYSQL_SERVER=db
+      - MYSQL_PORT=3306
+      - MYSQL_DB=sentiment
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+    volumes:
+      - ./image:/app/image
+
+  controller:
+    build:
+        context: ./crawler_keyword
+        dockerfile: Dockerfile.controller
+    image: controller
+    restart: always
+    environment:
+      - MYSQL_SERVER=db
+      - MYSQL_PORT=3306
+      - MYSQL_DB=sentiment
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+    
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

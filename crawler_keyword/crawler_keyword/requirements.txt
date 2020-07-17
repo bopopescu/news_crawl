@@ -1,0 +1,8 @@
+selenium
+pyvi
+elasticsearch==7.6.0
+scikit-learn
+mysql-connector-python
+sentence_splitter
+redis
+requests
