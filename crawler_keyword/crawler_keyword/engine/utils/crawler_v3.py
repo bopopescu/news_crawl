@@ -9,7 +9,7 @@ from cfg.config import config, CHROME_PATH, IMAGE_PATH
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from cfg.config import config
-#import utils.mysqlutils as db
+import utils.mysqlutils as db
 from utils.redisquene import RedisQueue
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
@@ -257,28 +257,28 @@ def crawl(source="",symbol="", keyword="", from_page=1, to_page=10000, exit_when
     End of finding starting and ending page
     """
 
-    #if db.connection_available():
-        #print("Scraping page", from_page, to_page)
-        #exit_because_url_exist = False
+    if db.connection_available():
+        print("Scraping page", from_page, to_page)
+        exit_because_url_exist = False
 
-    for page in range(from_page, to_page+1):
-        if exit_because_url_exist:
-            break
+        for page in range(from_page, to_page+1):
+            if exit_because_url_exist:
+                break
 
-        url = page_url.replace("{$page$}", str(page))
-        print("GETTING ", url)
-        wd.get(url)
-        link_elements = wd.find_elements_by_xpath(
-                xpath_configuration["post_links"]
-            )
-        links = [link_element.get_attribute("href") for link_element in link_elements]
-
-        for link in links:
-            print("get data from :", link)
-            data = get_post_content_from_link(
-                source=source, post_link=link, keyword=keyword, symbol=symbol
+            url = page_url.replace("{$page$}", str(page))
+            print("GETTING ", url)
+            wd.get(url)
+            link_elements = wd.find_elements_by_xpath(
+                    xpath_configuration["post_links"]
                 )
-            q.put(data)
+            links = [link_element.get_attribute("href") for link_element in link_elements]
+
+            for link in links:
+                print("get data from :", link)
+                data = get_post_content_from_link(
+                    source=source, post_link=link, keyword=keyword, symbol=symbol
+                    )
+                q.put(data)
                 
             
     else:
